@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>2 Income</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>2 Income</h1>
+<p>We can continue by categorising all income into four groups, each related to the asset categories:</p>
+<ol>
+<li><span class="bg-green-lighter border border-green-lightest px-2">Interest</span> - Return on Currency
+</li>
+</ol>
+<p>As banknotes and coins earn no interest, commercial banks are the only ones who can receive interest on Currency. They do this by depositing it with the Bank of England, and are paid the Bank Rate of interest in return.</p>
+<ol start="2">
+<li><span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span> - Return on Equity
+</li>
+</ol>
+<p>Although many equity assets don’t pay a return directly, some do. Examples of these are:</p>
+<ul>
+<li>Dividend paid to shareholders of a company
+</li>
+<li>Rent paid to a landlord who rents out a house
+</li>
+</ul>
+<ol start="3">
+<li><span class="bg-red-lighter border border-red-lightest px-2">Interest</span> - Return on Debt
+</li>
+</ol>
+<p>Almost all Debt pays Interest of some kind, usually a fixed amount per year.</p>
+<ol start="4">
+<li><span class="bg-blue-lighter border border-blue-lightest px-2">Wages</span>
+</li>
+</ol>
+<p>This covers any kind of income that does not come from an Asset, so along with wages from employment we are also going to include gifts and government benefits.</p>
+<h2>Total Income</h2>
+<p>All income received comes from one of these four sources. The overall proportion of each will vary over time and be influenced by the make-up of assets held. In aggregate across the country it may look similar to this.</p>
+<p><assets :assets="assets" classes="text-lg"></assets>
+<assets :assets="income" classes="h-6"></assets></p>
+<p>Although time passes continuously in the real world, we must measure time-dependent variables like income with reference to a specific time period. A year is a convenient default to use, as many measures of income (such as wages) are already quoted on an annual basis.</p>
+<p>Income can be quoted in nominal or real terms. Nominal income is normal income measured in the relevant currency, whereas real income is adjusted for changes in inflation. For example, if you get a pay rise of 1% but prices have risen by 2% then your real wage has fallen by ~1%.</p>
+<p>Next: <a href="3-spending.html">Spending</a></p>
+<script>
+    var data = {
+        assets: [{ name: "Currency", color: "green-dark", class: "w-1/4 p-2" },
+                        { name: "Equity", color: "yellow-dark", class: "w-1/4 p-2" },
+            { name: "Debt", color: "red-dark", class: "w-1/2 p-2" }],
+    income: [{ name: "Wages", color: "blue-light", class: "w-1/2" },
+            { name: "", color: "green-light", class: "w-8" },
+                        { name: "Dividends", color: "yellow-light", class: "w-1/6" },
+            { name: "Interest", color: "red-light", class: "w-1/4" },
+            { name: "(not to scale)", class: "text-left text-sm pl-2 w-1/3" }]
+    };
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

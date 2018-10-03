@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>11 Monetary Policy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>11 Monetary Policy</h1>
+<h2>Conventional</h2>
+<p>The Bank of England changes policy by adjusting the Bank Rate, which is the rate of <span class="bg-green-lighter border border-green-lightest px-2">Interest</span> they pay on <span class="bg-green-light border border-green px-2">Currency</span> deposited with them by commercial banks. This rate affects the economy via two routes:</p>
+<ol>
+<li><p>Lower interest on Currency reserves decreases the demand for Currency, and increases the demand for Savings, raising their price. More valuable Savings make consumers and companies richer, encouraging them to spend more on Consumption and raising their Multipliers. <cinterest-down></cinterest-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-up></income-up></p>
+</li>
+<li><p>A lower Bank Rate leads to lower rates on deposits and mortgages. This encourages consumers and companies to borrow and spend, causing more debt to be issued and increasing GNI.<cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><equity-up></equity-up><gni-up></gni-up><income-down></income-down></p>
+</li>
+</ol>
+<p>Raising the policy rate has the opposite effects:
+<cinterest-up></cinterest-up><arrow></arrow><interest-up></interest-up><equity-down></equity-down><gni-down></gni-down></p>
+<p>Notice that raising rates doesn’t actually decrease the amount of Debt, just discourages any further increase. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will increase the total amount of Debt and slow future GNI growth. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-up></debt-up><arrow></arrow><income-down></income-down></p>
+<p>This approach has worked very well for a long time, but always ends up increasing the total amount of Debt. As this Debt slows GNI growth, ever more Debt is required to keep GNI growing. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession.</p>
+<p>Conventional monetary policy cannot keep working indefinitely - it is a feedback loop of ever-increasing debt. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
+<h2>Unconventional</h2>
+<p>Surprisingly unconventional policy is actually much simpler: the Bank of England can increase or decrease the amount of Currency in circulation, either temporarily or permanently.</p>
+<h3>Temporary</h3>
+<p>Quantitative Easing (QE) is an example of a way to temporarily inject money into the economy.</p>
+<ul>
+<li>The Bank of England buys government bonds in exchange for Currency
+</li>
+<li>This reduces Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up>
+</li>
+<li>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-down></currency-down>
+</li>
+<li>The government would replace this with new Debt, thus returning us to where we started <debt-up></debt-up>
+</li>
+<li>Overall there is no net effect after the bond has matured <currency-flat></currency-flat><debt-flat></debt-flat>
+</li>
+</ul>
+<div class="container w-2/3 flex">
+    <div class="w-16 text-left p-1 mr-4">Before</div>
+    <assets :assets="before" classes="h-8 w-64"></assets>
+</div><div class="w-104 text-center m-0">
+    <i class="fas fa-angle-down"></i>
+</div><div class="container w-2/3 flex align-center">
+    <div class="w-16 text-left p-1 mr-4">During</div>
+    <assets :assets="during" classes="h-8 w-64"></assets>
+</div><div class="w-104 text-center m-0">
+    <i class="fas fa-angle-down"></i>
+</div><div class="container w-2/3 flex">
+    <div class="w-16 text-left p-1 mr-4">After</div>
+    <assets :assets="after" classes="h-8 w-64"></assets>
+</div><p><code class="inline">Figure 1: Change in distribution of assets from QE</code></p>
+<p>Despite having only a temporary effect, QE does have a positive effect on GNI while it is active, via it’s effect on other asset prices.</p>
+<p>Raising the amount of Currency in circulation while keeping it’s demand constant will increase the value of Savings. This makes consumers and companies richer, encouraging them to spend more on Consumption and raising their Multipliers. <currency-up></currency-up><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-up></income-up></p>
+<h3>Permanent</h3>
+<p>A more permanent way to increase Currency and get the same effects would be to purchase the Government Debt, then write it off.  This would act as a permanent increase in Currency and decrease in Debt, although it would need to be done repeatedly if it is to be more than a one-off.</p>
+<p>A more structured way to do this on an ongoing basis would be to pay money directly to the Government by adjusting their annual budget by the desired amount. The Central Bank could forecast the future new Currency required and tell the Government the size of these future payments so they could budget accordingly. Furthermore, this would allow interest rates to be raised from their current low levels without slowing GNI growth, reducing the inflated value of assets such as houses that are currently propped up by cheap credit.</p>
+<p>As Government spending is also generally progressive, a higher proportion of this spending would go towards people with a lower than average Multiplier, thus having a larger effect on GNI growth than conventional monetary policy.</p>
+<p>In the event of GNI growth exceeding it’s target, the Bank of England would want to remove Currency from circulation. The same mechanism can be used to do this by revising down Government budgets.</p>
+<p>This would reduce the power of the government, but it would also protect the citizens of the country from bad governments who pursue short term targets without considering the long term cost of their actions.</p>
+<p>Next: <a href="12-foreign-trade.html">Foreign Trade</a></p>
+<script>
+    var data = {
+        before: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
+                        { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
+                        { name: "Debt", color: "red-dark", class: "w-24 pt-1" },
+                        { name: "", color: "red-dark", class: "w-8 pt-1" }],
+        during: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
+                        { name: "", color: "green-dark", class: "w-8 pt-1" },
+                        { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
+                        { name: "Debt", color: "red-dark", class: "w-24 pt-1" }],
+        after: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
+                        { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
+                        { name: "Debt", color: "red-dark", class: "w-24 pt-1" },
+                        { name: "", color: "red-dark", class: "w-8 pt-1" }]
+    };
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

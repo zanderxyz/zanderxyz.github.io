@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>7 Growth</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>7 Growth</h1>
+<p>Assuming no new money is created from one year to the next, the following year’s <span class="bg-grey border border-grey-dark px-1">GNI</span> will depend on:</p>
+<ul>
+<li>What proportion of last year’s income is re-spent on Consumption and how many times
+</li>
+<li>What proportion of existing Savings are spent on Consumption
+</li>
+</ul>
+<blockquote><p>$GNI_{n+1} = m GNI_n + m_s a S_n$
+<br><br>
+where:</p>
+<ul>
+<li>$m$ is the Structural Multiplier, the Multiplier on the income comprising $GNI_n$
+</li>
+<li>$S_n$ is the total of existing Savings at the end of year 1
+</li>
+<li>$a$ is the proportion of existing Savings that are spent on Consumption each year
+</li>
+<li>$m_s$ is the Multiplier on the spent Savings
+</li>
+</ul>
+</blockquote>
+<p><span class="bg-grey border border-grey-dark px-1">GNI</span> from year to year can therefore only be increased by:</p>
+<ul>
+<li>Increasing the Multipliers
+</li>
+<li>Encouraging existing Savings to be spent on Consumption
+</li>
+<li>New Money
+</li>
+</ul>
+<p>As the total amount of Savings generally increases year on year, in order for GNI to grow by a rate comfortably above 0%, we need the Structural Multiplier to be above 100%. If it isn’t, then new money will have to be created each year in order to grow GNI sufficiently <gni-up></gni-up>.</p>
+<p>Next: <a href="8-money.html">Money</a></p>
+<script>
+    var data = {};
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

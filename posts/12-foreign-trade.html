@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>12 Foreign Trade</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>12 Foreign Trade</h1>
+<p>Up until now we have been considering a closed economy, but in the real world we trade with other countries. Fortunately this changes very little in our model:</p>
+<ul>
+<li>Money leaving the country will have a very low Multiplier
+</li>
+<li>Money entering the country will immediately add to GNI
+</li>
+</ul>
+<p>There are four situations to consider:</p>
+<ol>
+<li>Exports
+</li>
+</ol>
+<p>Goods and services produced at home and sold abroad; these are included in income already. Exports give an immediate boost to GNI as new money enters the country <exports></exports><arrow></arrow><gni-up></gni-up></p>
+<ol start="2">
+<li>Imports
+</li>
+</ol>
+<p>Goods and services purchased from abroad, these are also already included; this expenditure will have a very low Multiplier as the money leaves the country <imports></imports><arrow></arrow><gni-down></gni-down></p>
+<ol start="3">
+<li>Foreign Investment
+</li>
+</ol>
+<p>Selling Savings to a foreign buyer; this acts like new Debt as the new money gives an initial boost to GNI growth but will act as an ongoing drag as dividends and interest payments leave the country <foreign></foreign><arrow></arrow><gni-up></gni-up><income-down></income-down></p>
+<ol start="4">
+<li>Overseas Investment
+</li>
+</ol>
+<p>Buying overseas Savings; the opposite to foreign investment, this will initially slow down GNI growth as the money spent leaves the country but there will be an ongoing boost as dividends and interest payments flow back <overseas></overseas><arrow></arrow><gni-down></gni-down><income-up></income-up></p>
+<h3>Definitions</h3>
+<ul>
+<li><strong>Balance of Trade</strong> is the value of a country’s Exports minus its Imports in any given year
+</li>
+<li><strong>Net Savings Outflow</strong> is the value of a country’s net new Overseas Investment minus its net new Foreign Investment in any given year
+</li>
+<li><strong>Current Account</strong> is a country’s Balance of Trade plus the value of dividends and interest received on Overseas Investments, minus dividends and interest paid on Foreign Investments
+</li>
+</ul>
+<h2>Conclusions</h2>
+<p>A positive Current Account means that a country is receiving more than it is paying out from abroad, which will act as new money that gives a boost to GNI. In contrast, a country with a negative Current Account is a net borrower from the rest of the world, and will need to offset this drag with new money.</p>
+<p>Where we are dealing with scarce assets such as housing, allowing an increasing proportion to be bought by overseas buyers for investment purposes can be very bad for the local economy as an increasing proportion of workers’ income needs to be spent on rent/inflated mortgage payments. This means less local Consumption and a slowing economy.</p>
+<p>TODO UK situation</p>
+<p>Next: <a href="13-savings-ceiling.html">Savings Ceiling</a></p>
+<script>
+    var data = {};
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

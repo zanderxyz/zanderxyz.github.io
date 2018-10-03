@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>3 Spending</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>3 Spending</h1>
+<p>Every time somebody spends part of their income on Consumption that money is split up and paid on so that it becomes income for others.</p>
+<p>Specifically, every time money is spent on Consumption it splits into the following groups:</p>
+<ol>
+<li><span class="bg-blue-lighter border border-blue-lightest px-2">Wages</span>
+</li>
+<li><span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span>
+</li>
+<li><span class="bg-red-lighter border border-red-lightest px-2">Interest</span>
+</li>
+<li><span class="bg-blue-light border border-blue px-2">Consumption</span> on intermediate goods
+</li>
+</ol>
+<blockquote><p>There is no <span class="bg-green-lighter border border-green-lightest px-2">Interest</span> here, as this is only ever paid by the Bank of England</p>
+</blockquote>
+<h3>Example - Buying a hat</h3>
+<p>Money spent on the hat is paid to a shop, and then split as follows:</p>
+<ol>
+<li><span class="bg-blue-lighter border border-blue-lightest px-2">Wages</span> for the shop workers
+</li>
+<li><span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span> for the shop owners
+</li>
+<li><span class="bg-red-lighter border border-red-lightest px-2">Interest</span> for anyone who has lent money to the shop
+</li>
+<li><span class="bg-blue-light border border-blue px-2">Consumption</span> buying the hat from the manufacturer
+</li>
+</ol>
+<br><p>The money spent buying the hat goes to the company who made the hat, and then split as follows:</p>
+<ol>
+<li><span class="bg-blue-lighter border border-blue-lightest px-2">Wages</span> for the workers who made the hat
+</li>
+<li><span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span> for the owners of the company
+</li>
+<li><span class="bg-red-lighter border border-red-lightest px-2">Interest</span> for anyone who has lent money to the company
+</li>
+<li><span class="bg-blue-light border border-blue px-2">Consumption</span> buying materials to make the hat
+</li>
+</ol>
+<br><p>And the money spent on the materials gets split in the exact same way. If we continue breaking down Consumption until we run out of things to break down, we can sum all the component incomes and they will add up to the amount spent on the hat.</p>
+<p>This demonstrates the simple fact that in a closed economy, any money spent on Consumption becomes income for somebody else.</p>
+<div class="container flex mt-2 h-64 text-center text-xs">
+    <div class="w-24 bg-blue-light pt-24 p-2 border border-blue rounded text-sm">Money spent</div>
+    <div class="w-6 pt-24">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-24 h-64">
+        <div class="bg-blue-light h-half border border-blue rounded-t pt-12">Consumption</div>
+        <div class="bg-blue-lighter h-sixth border border-blue-lightest pt-3">Wages</div>
+        <div class="bg-yellow-light h-sixth border border-yellow-lighter pt-3">Dividends</div>
+        <div class="bg-red-lighter h-sixth border border-red-lightest rounded-b pt-3">Interest</div>
+    </div>
+    <div class="w-6 pt-12">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-32">
+        <div class="bg-blue-light h-half border border-blue rounded-t"></div>
+        <div class="bg-blue-lighter h-sixth border border-blue-lightest"></div>
+        <div class="bg-yellow-light h-sixth border border-yellow-lighter"></div>
+        <div class="bg-red-lighter h-sixth border border-red-lightest rounded-b"></div>
+    </div>
+    <div class="w-6 pt-6">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-16">
+        <div class="bg-blue-light h-half border border-blue rounded-t pt-1"></div>
+        <div class="bg-blue-lighter h-sixth border border-blue-lightest"></div>
+        <div class="bg-yellow-light h-sixth border border-yellow-lighter"></div>
+        <div class="bg-red-lighter h-sixth border border-red-lightest rounded-b"></div>
+    </div>
+    <div class="w-6 pt-2">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-8">
+        <div class="bg-blue-lighter h-third border border-blue-lightest rounded-t"></div>
+        <div class="bg-yellow-light h-third border border-yellow-lighter"></div>
+        <div class="bg-red-lighter h-third border border-red-lightest rounded-b"></div>
+    </div>
+</div><p><code class="inline">Figure 1: Sum of all wages, dividends and interest = Money spent</code></p>
+<h2>Taxation</h2>
+<p>Conveniently, we can include tax in the model above without changing anything - Taxes will remove a percentage of Wages, Dividends and Interest and become a fifth group at each stage. These tax receipts will be split by the government and paid out as Wages to Government employees, Interest on Government Debt and Consumption. The Taxes portion is therefore very similar to a second Consumption group.</p>
+<p>In future, when we refer to Consumption we really mean Consumption plus Taxes.</p>
+<h2>Gross National Income</h2>
+<p>If we add up the after-tax income of every person and company in the country in a single year, we get the Gross National Income (GNI) for that year. References to GNI from now on will mean nominal GNI, and real GNI will be referred to explicitly.</p>
+<p><assets :assets="gni" classes="h-6"></assets>
+<assets :assets="income" classes="h-6"></assets></p>
+<p>Next: <a href="4-saving.html">Saving</a></p>
+<script>
+    var data = {
+        gni: [{name: "GNI", color: "grey-dark", class: "w-full"}],
+    income: [{ name: "Wages", color: "blue-light", class: "w-1/2" },
+            { name: "", color: "green-light", class: "w-4" },
+                        { name: "Dividends", color: "yellow-light", class: "w-1/6" },
+            { name: "Interest", color: "red-light", class: "w-1/3" }]
+    };
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

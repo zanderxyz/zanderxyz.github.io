@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>4 Saving</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>4 Saving</h1>
+<p>Any income received that isn’t spent on Consumption has been saved. Saving involves buying Equity or Debt. Remember that money in your bank account is Debt, so counts as part of Savings.</p>
+<p>As we know, anything spent on Consumption becomes income for other people. This leads us to the fact that if somebody chooses to save some of their income instead of spending it on Consumption, then this will directly reduce the total income of other people by the same  amount.</p>
+<p>Suppose we take somebody’s income and break it down into Consumption and Savings. The Consumption spending becomes income for others so we can split this income into Consumption and Savings again.</p>
+<p>Continuing in this manner until the year ends, and adding up all the Consumption, we will get a number giving us the contribution to GNI of the original income received. Dividing this by the original income gives us the Multiplier of that income.</p>
+<div class="container flex mt-2 h-64 text-center text-xs">
+    <div class="w-24 bg-blue-lighter pt-24 p-2 border border-blue-lightest rounded text-sm">Income</div>
+    <div class="w-6 pt-24">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-24 h-64">
+        <div class="bg-blue-light h-half border border-blue rounded-t pt-12">Consumption</div>
+        <div class="bg-grey-light h-half border border-grey-lighter rounded-b pt-12">Savings</div>
+    </div>
+    <div class="w-6 pt-12">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-32">
+        <div class="bg-blue-light h-half border border-blue rounded-t pt-4"></div>
+        <div class="bg-grey-light h-half border border-grey-lighter rounded-b pt-4"></div>
+    </div>
+    <div class="w-6 pt-6">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-16">
+        <div class="bg-blue-light h-two-thirds border border-blue rounded-t pt-2"></div>
+        <div class="bg-grey-light h-third border border-grey-lighter rounded-b"></div>
+    </div>
+    <div class="w-6 pt-2">
+        <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="w-16 h-10">
+        <div class="bg-blue-light h-two-thirds border border-blue rounded-t"></div>
+        <div class="bg-grey-light h-third border border-grey-lighter rounded-b"></div>
+    </div>
+</div><p><code class="inline">Figure 1: Income received contributes to GNI again as it is spent. Here the Multiplier is approximately 100%</code></p>
+<p>Every recipient of income has their own Multiplier and their own Marginal Multiplier, which is the incremental Multiplier for a small change in income. Generally speaking, somebody living pay cheque to pay cheque will have a high Marginal Multiplier, whereas someone very rich will have a low MM, as they will save most of their income.</p>
+<p>The Multiplier can be lower than 100% (if the savings rate is high, or if money is spent slowly), or it can be higher than 100% (if the savings rate is low, or if money is spent and re-spent quickly).</p>
+<p>Next: <a href="5-liabilities.html">Liabilities</a></p>
+<script>
+    var data = {};
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

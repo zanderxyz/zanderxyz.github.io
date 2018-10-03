@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>5 Liabilities</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>5 Liabilities</h1>
+<p>Liabilities are the opposite side of the balance sheet from Assets. Just as Savings are an Asset to the person receiving income from it, Savings are a Liability for the person or people paying that income.</p>
+<h3>Example - Property and Mortgages</h3>
+<p>A landlord who rents out a house has Equity in the house as an Asset, and their mortgage as a liability (we assume here that 20% is paid off):
+<assets-liabilities :assets="house" :liabilities="mortgage" classes="w-64"></assets-liabilities></p>
+<p>A tenant who lives in the house has Equity in the house as a Liability, as they must pay rent to live there:
+<assets-liabilities :assets="various" :liabilities="house" classes="w-64"></assets-liabilities></p>
+<p>The bank has the mortgage Debt as an Asset:
+<assets-liabilities :assets="mortgage" :liabilities="various23" classes="w-64"></assets-liabilities></p>
+<h3>Example - Bank Loans</h3>
+<p>The recipient of a bank loan has deposits as Assets, and that loan as their Liability:
+<assets-liabilities :assets="deposits" :liabilities="loan" classes="w-64"></assets-liabilities></p>
+<p>The bank has Currency and the loan as Assets, and the deposits as Liabilities (the bank had the Currency before the loan was made):
+<assets-liabilities :assets="bank_a" :liabilities="bank_l" classes="w-64"></assets-liabilities></p>
+<p>If the borrower withdraws the money from their account as cash, they’ll have Currency as an asset:
+<assets-liabilities :assets="currency" :liabilities="loan" classes="w-64"></assets-liabilities></p>
+<p>And the bank will have paid out that Currency and be left with just the loan, with no liabilities:
+<assets-liabilities :assets="loan" :liabilities="empty" classes="w-64"></assets-liabilities></p>
+<h2>Conclusions</h2>
+<p>Looked at more generally, for our three types of Asset:</p>
+<ol>
+<li><p><span class="bg-green-light border border-green px-2">Currency</span> is only ever a liability of the Bank of England, as they are the only ones that can produce it</p>
+</li>
+<li><p><span class="bg-yellow border border-yellow-dark px-2">Equity</span> and <span class="bg-red-light border border-red px-2">Debt</span> are liabilities of whoever is paying the <span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span> or <span class="bg-red-lighter border border-red-lightest px-2">Interest</span>. On first look, this is the company who issued the equity or debt. But the company is just a middle man - ultimately the dividends and interest are paid by consumers who buy products from the company.</p>
+</li>
+</ol>
+<blockquote><p>Considered across the whole of society, Savings are a Liability for everyone.</p>
+</blockquote>
+<p>This is a great example of how our model differs from the real world by design. Even though the customers of a company are benefiting from the arrangement through the products they buy, in our financial model we only see the downside from their perspective - the money they must pay.</p>
+<p>Next: <a href="6-stability.html">Stability</a></p>
+<script>
+    var data = {
+        bank_a: [{name: "Currency", color: "green-dark", class: "w-1/2"},
+                            {name: "Loans", color: "red-dark", class: "w-1/2"}],
+        bank_l: [{name: "Deposits", color: "red-dark", class: "w-1/2"}],
+        house: [{name: "House", color: "yellow-dark", class: "w-full"}],
+        mortgage: [{name: "Mortgage", color: "red-dark", class: "w-4/5"}],
+        various: [{name: "Other Assets", color: "grey-dark", class: "w-full"}],
+        various23: [{name: "Other Liabilities", color: "grey-dark", class: "w-4/5"}],
+        deposits: [{name: "Deposits", color: "red-dark", class: "w-1/2"}],
+        loan: [{name: "Loan", color: "red-dark", class: "w-1/2"}],
+        currency: [{name: "Currency", color: "green-dark", class: "w-1/2"}],
+        empty: []
+    };
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

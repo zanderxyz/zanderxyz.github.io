@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>9 Private Debt</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+  </head>
+
+  <body>
+    <main id="main">
+  <h1>9 Private Debt</h1>
+<h2>Commercial Bank Loans</h2>
+<p>The majority of new money created in the economy is created by commercial banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account in the form of a deposit. The amount lent by banks is constrained by how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements.</p>
+<p>We can see this most clearly using an asset liability diagram.</p>
+<h3>Bank</h3>
+<p><al-change :ab="bankab" :aa="bankaa" :lb="banklb" :la="bankla"></al-change></p>
+<h3>Borrower</h3>
+<p><al-change :ab="borrowerab" :aa="borroweraa" :lb="borrowerlb" :la="borrowerla"></al-change></p>
+<ul>
+<li>Before, we have a commercial bank and a borrower.
+</li>
+<li>The assets for the bank are Currency, some Equity and previous loans they have made, while their liabilities are deposits, as they have borrowed this money from consumers
+</li>
+<li>The assets for the borrower are Currency and deposits, offset by other liabilities
+</li>
+<li>After the new loan, the borrower holds a larger amount of deposits, plus now has the new loan as a liability
+</li>
+<li>The bank now owns the new loan as an asset, and has an offsetting increase in deposits on the liability side
+</li>
+</ul>
+<p>Since deposits are money, there has been a strict increase in money in circulation along with an increase in Debt. <debt-up></debt-up></p>
+<p>The new deposit itself does not count as income (as it is offset by a liability), but after it is spent it will contribute to GNI, so it will have a Multiplier just like normal income.</p>
+<h3>Examples</h3>
+<ol>
+<li><strong>Mortgages</strong>
+</li>
+</ol>
+<p>Borrowing to buy a house will generally have a low Multiplier, as in most cases the seller will just re-spend the money on a different house or other Savings. Few people sell a house then spend the proceeds on Consumption. This kind of borrowing therefore leads to an increase in asset prices, but only a limited increase in GNI. <debt-up></debt-up><arrow></arrow><equity-up></equity-up><gni-flat></gni-flat></p>
+<ol start="2">
+<li><strong>Business Investment</strong>
+</li>
+</ol>
+<p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be Consumption and thus become income for others.
+<debt-up></debt-up><arrow></arrow><equity-up></equity-up><dividends-up></dividends-up><gni-up></gni-up></p>
+<h2>Corporate Bonds</h2>
+<p>The second type of “new money” via Private Debt comes from bonds issued by companies and sold to investors.</p>
+<h3>Company</h3>
+<p><al-change :ab="companyab" :aa="companyaa" :lb="companylb" :la="companyla"></al-change></p>
+<h3>Investor</h3>
+<p><al-change :ab="investorab" :aa="investoraa" :lb="investorlb" :la="investorla"></al-change></p>
+<ul>
+<li>Before the loan, both the company and investor have a mix of assets on hand. The company’s liabilities are mostly existing bonds.
+</li>
+<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits are transferred to the company from the investor.
+</li>
+</ul>
+<p>Here there has been no net increase in deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which again comes with an increase in Debt. As this bond is a riskier investment than a deposit, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
+<p>The answer is that it doesn’t, but what it does do is move bank deposits from an investor (unlikely to spend them) to a company (who presumably has a reason for issuing the bond and is more likely to). This should increase the Multiplier for that Deposit, and therefore increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>If the company is a strong credit who is very unlikely to default, then the bond will also act somewhat similarly to money, also a net positive for GNI.</p>
+<h2>Ongoing Effects</h2>
+<p>In both of the above cases, an investor spends Deposits to purchase Debt, and a borrower issues the Debt and receives Deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate boost to GNI as this money is spent. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>However, this initial transfer is not the only time money changes hands under a loan. Every time interest is paid, it goes from the borrower (high MM) to the investor (low MM), which will act as an ongoing drag on GNI. <debt-up></debt-up><arrow></arrow><income-down></income-down></p>
+<p>So although new Private Debt has an initial positive effect on GNI when taken out, it will also slow GNI growth during it’s life. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down></p>
+<p>Next: <a href="10-government-debt.html">Government Debt</a></p>
+<script>
+    var data = {
+        bankab: [{ name: "Currency", color: "green-dark", class: "w-16" },
+                    { name: "Equity", color: "yellow-dark", class: "w-16" },
+                    { name: "Loans", color: "red-dark", class: "w-32" }],
+        banklb: [{ name: "Deposits", color: "red-dark", class: "w-64" }],
+        bankaa: [{ id: 1, name: "Currency", color: "green-dark", class: "w-16" },
+                    { name: "Equity", color: "yellow-dark", class: "w-16" },
+                    { name: "Debt", color: "red-dark", class: "w-32" },
+                    { name: "Loan", color: "red-dark-new", class: "w-16" }],
+        bankla: [{ name: "Deposits", color: "red-dark", class: "w-64" },
+                    { name: "Deposit", color: "red-dark-new", class: "w-16" }],
+        borrowerab: [{ name: "Currency", color: "green-dark", class: "w-16" },
+                    { name: "Deposits", color: "red-dark", class: "w-32" },
+                    { class: "w-16" }],
+    borrowerlb: [{ name: "Various", color: "grey-dark", class: "w-48" }],
+    borroweraa: [{ name: "Currency", color: "green-dark", class: "w-16" },
+                    { name: "Deposits", color: "red-dark", class: "w-32" },
+                    { name: "Deposit", color: "red-dark-new", class: "w-16" }],
+    borrowerla: [{ name: "Various", color: "grey-dark", class: "w-48" },
+                        { name: "Loan", color: "red-dark-new", class: "w-16" }],
+        companyab: [{name: "Equity", color: "yellow-dark", class: "w-32"},
+                                {name: "Deposits", color: "red-dark", class: "w-32"}],
+        companylb: [{name: "Bonds", color: "red-dark", class: "w-64"}],
+        companyaa: [{name: "Equity", color: "yellow-dark", class: "w-32"},
+                                {name: "Deposits", color: "red-dark", class: "w-32"},
+                                {name: "Deposit", color: "red-dark-new", class: "w-16"}],
+        companyla: [{name: "Bonds", color: "red-dark", class: "w-64"},
+                                {name: "Bond", color: "red-dark-new", class: "w-16"}],
+        investorab: [{ name: "Currency", color: "green-dark", class: "w-16" },
+                                { name: "Deposits", color: "red-dark", class: "w-32" },
+                                { class: "w-16" }],
+        investorlb: [{ name: "Various", color: "grey-dark", class: "w-48" }],
+        investoraa: [{ name: "Currency", color: "green-dark", class: "w-16" },
+                                { name: "Deposits", color: "red-dark", class: "w-16" },
+                                { name: "Bond", color: "red-dark-new", class: "w-16" },
+                                { class: "w-16" }],
+        investorla: [{ name: "Various", color: "grey-dark", class: "w-48" }]
+    };
+
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>
