@@ -18,10 +18,20 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126974518-1');
+    </script>
   </head>
 
   <body>
-    <main id="main">
+    <section style="position: absolute; top: 1vh; font-family: Menlo, Courier, monospace; color: red; font-weight: 700; font-size: 1.5rem;">DRAFT</section>
+<main id="main">
   <h1>1 Assets</h1>
 <p>We’ll start by defining three groups, which represent all assets that can be held, and a fourth group representing anything else that people may buy.</p>
 <ol>
@@ -38,15 +48,15 @@
 <li><span class="bg-red-light border border-red px-2">Debt</span>
 </li>
 </ol>
-<p>This represents Currency you are owed by somebody else. Usually the borrower will pay interest each year until they have to repay the original sum borrowed.</p>
-<blockquote><p>Money in your bank account is actually Debt with no fixed repayment date, and not Currency. Nowadays most exchanges of money are paid in the form of bank deposits rather than actual physical Currency changing hands.</p>
+<p>This represents <span class="bg-green-light border border-green px-2">Currency</span> you are owed by somebody else. Usually the borrower will pay interest each year until they have to repay the original sum borrowed.</p>
+<blockquote><p>Money in your bank account is actually Debt with no fixed repayment date, and not Currency. Nowadays most exchanges of money are paid in the form of bank deposits rather than cash changing hands.</p>
 </blockquote>
 <ol start="4">
 <li><span class="bg-blue-light border border-blue px-2">Consumption</span>
 </li>
 </ol>
 <p>Anything temporary, such as services, food and drink, clothes, or intermediate goods used in the production of other goods. Although some of these are semi-permanent (such as clothes), we treat them as if they cease to exist after being purchased (since the benefits are purely non-financial, we exclude them from the model).</p>
-<blockquote><p>If a business invests in building a factory to increase their future profitability, the expenditure would count as Consumption, although it would increase the value of the company’s Equity once complete. In contrast, if they buy an existing factory then that would be a direct purchase of Equity from the seller.</p>
+<blockquote><p>If a business invests in building a factory to increase their future profitability, the expenditure would count as Consumption, although it would increase the value of the company once complete. In contrast, if they buy an existing factory then that would be a direct purchase of <span class="bg-yellow border border-yellow-dark px-2">Equity</span> from the seller.</p>
 </blockquote>
 <h3>Total Assets</h3>
 <p>The sum total of all Assets in the economy is made up of Currency, Equity and Debt. The exact proportion of each will vary but it may look something like this.</p>

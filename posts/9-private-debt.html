@@ -18,14 +18,24 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126974518-1');
+    </script>
   </head>
 
   <body>
-    <main id="main">
+    <section style="position: absolute; top: 1vh; font-family: Menlo, Courier, monospace; color: red; font-weight: 700; font-size: 1.5rem;">DRAFT</section>
+<main id="main">
   <h1>9 Private Debt</h1>
 <h2>Commercial Bank Loans</h2>
 <p>The majority of new money created in the economy is created by commercial banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account in the form of a deposit. The amount lent by banks is constrained by how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements.</p>
-<p>We can see this most clearly using an asset liability diagram.</p>
+<p>This is explained in a <a href="https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf?la=en&hash=9A8788FD44A62D8BB927123544205CE476E01654">Bank of England report</a> on the subject. We can see this most clearly using an asset liability diagram.</p>
 <h3>Bank</h3>
 <p><al-change :ab="bankab" :aa="bankaa" :lb="banklb" :la="bankla"></al-change></p>
 <h3>Borrower</h3>
@@ -43,7 +53,7 @@
 </li>
 </ul>
 <p>Since deposits are money, there has been a strict increase in money in circulation along with an increase in Debt. <debt-up></debt-up></p>
-<p>The new deposit itself does not count as income (as it is offset by a liability), but after it is spent it will contribute to GNI, so it will have a Multiplier just like normal income.</p>
+<p>After the new deposit is spent it will contribute to GNI, so it will have a Multiplier just like normal income.</p>
 <h3>Examples</h3>
 <ol>
 <li><strong>Mortgages</strong>
@@ -54,7 +64,7 @@
 <li><strong>Business Investment</strong>
 </li>
 </ol>
-<p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be Consumption and thus become income for others.
+<p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be Wages or Consumption and thus become income for others.
 <debt-up></debt-up><arrow></arrow><equity-up></equity-up><dividends-up></dividends-up><gni-up></gni-up></p>
 <h2>Corporate Bonds</h2>
 <p>The second type of “new money” via Private Debt comes from bonds issued by companies and sold to investors.</p>
@@ -65,14 +75,14 @@
 <ul>
 <li>Before the loan, both the company and investor have a mix of assets on hand. The company’s liabilities are mostly existing bonds.
 </li>
-<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits are transferred to the company from the investor.
+<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits move to the company from the investor.
 </li>
 </ul>
-<p>Here there has been no net increase in deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which again comes with an increase in Debt. As this bond is a riskier investment than a deposit, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
-<p>The answer is that it doesn’t, but what it does do is move bank deposits from an investor (unlikely to spend them) to a company (who presumably has a reason for issuing the bond and is more likely to). This should increase the Multiplier for that Deposit, and therefore increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>There has been no net increase in deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which is again a net increase in Debt <debt-up></debt-up>. As this bond is a comparatively risky investment, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
+<p>The answer is that it doesn’t, but it does move bank deposits from an investor (unlikely to spend them) to a company (who is more likely to, as they must have a reason for issuing the bond). This should increase the Multiplier for that deposit, and therefore increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 <p>If the company is a strong credit who is very unlikely to default, then the bond will also act somewhat similarly to money, also a net positive for GNI.</p>
 <h2>Ongoing Effects</h2>
-<p>In both of the above cases, an investor spends Deposits to purchase Debt, and a borrower issues the Debt and receives Deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate boost to GNI as this money is spent. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>In both of the above cases, an investor spends deposits to purchase Debt, and a borrower issues the Debt and receives deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate boost to GNI as this money is spent. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 <p>However, this initial transfer is not the only time money changes hands under a loan. Every time interest is paid, it goes from the borrower (high MM) to the investor (low MM), which will act as an ongoing drag on GNI. <debt-up></debt-up><arrow></arrow><income-down></income-down></p>
 <p>So although new Private Debt has an initial positive effect on GNI when taken out, it will also slow GNI growth during it’s life. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down></p>
 <p>Next: <a href="10-government-debt.html">Government Debt</a></p>

@@ -10,6 +10,8 @@ var colors = {
   'yellow-dark-new': 'bg-yellow-light border border-yellow-dark',
   'blue-light': 'bg-blue-lighter border border-blue-lightest',
   'blue-dark': 'bg-blue-light border border-blue',
+  'orange-light': 'bg-orange-light border border-orange-lighter',
+  'orange-dark': 'bg-orange border border-orange-dark',
   'purple-light': 'bg-purple-lighter border border-purple-lightest',
   'purple-dark': 'bg-purple-light border border-purple',
   'grey-light': 'bg-grey-light border border-grey-lighter',
@@ -25,6 +27,10 @@ var text_colors = {
   'yellow-dark': 'text-white',
   'blue-light': 'text-blue-dark',
   'blue-dark': 'text-blue-lightest',
+  'orange-light': 'text-orange-lighter',
+  'orange-dark': 'text-orange-dark',
+  'purple-light': 'text-purple-dark',
+  'purple-dark': 'text-purple-lightest',
   'grey-light': 'text-grey-dark',
   'grey-dark': 'text-grey-lightest'
 }
@@ -320,6 +326,24 @@ Vue.component('gni-down', {
   data: function () {
     return {
       icons: [{ icon: "fa-sort-down", color: "grey-dark", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('ca-up', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-up", color: "purple-dark", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('ca-down', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-down", color: "purple-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'

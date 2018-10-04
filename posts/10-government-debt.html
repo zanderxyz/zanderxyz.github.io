@@ -18,32 +18,54 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126974518-1');
+    </script>
   </head>
 
   <body>
-    <main id="main">
+    <section style="position: absolute; top: 1vh; font-family: Menlo, Courier, monospace; color: red; font-weight: 700; font-size: 1.5rem;">DRAFT</section>
+<main id="main">
   <h1>10 Government Debt</h1>
-<p>When a government spends more in one year than they receive in tax receipts, this difference is known as their budget deficit. In order to fund the spending they must issue bonds with value equal to the deficit.</p>
-<p>This government debt is, on face value, very similar to the private debt of a very safe borrower, with a few differences:</p>
+<p>When a government spends more in one year than they receive in tax receipts, this difference is known as their budget deficit. In order to fund the spending they must issue bonds with total value equal to the deficit.</p>
+<p>This government debt is very similar to the private debt of a very safe borrower, with a few differences:</p>
 <ul>
-<li>It pays a lower rate of interest than Private Debt, so it’s drag on future GNI will be lower
+<li>It pays a lower rate of interest than <span class="bg-red-light border border-red px-2">Private Debt</span>, so its drag on <span class="bg-grey-light border border-grey px-2">GNI growth</span> will be lower
 </li>
-<li>When the government borrows money it is almost always spent on Consumption of some kind
+<li>When the government borrows money it is almost always spent on <span class="bg-blue-light border border-blue px-2">Consumption</span> of some kind
 </li>
 </ul>
-<p>The four main things Governments spend money on are:</p>
-<h3>Redistribution</h3>
+<p>The four main things governments spend money on are:</p>
+<ol>
+<li><strong>Redistribution</strong>
+</li>
+</ol>
 <p>Shifting income from the wealthy to the less wealthy.</p>
 <p>This will always have a high Multiplier and increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
-<h3>Infrastructure</h3>
+<ol start="2">
+<li><strong>Infrastructure</strong>
+</li>
+</ol>
 <p>Building bridges, roads and public transport lines.</p>
 <p>The return on these projects can be highly variable, but generally speaking those that are in poorer areas or that affect the most people will have the larger positive effects on GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 <p>It is also important that as much as possible is spent within the country so that the money can circulate after being spent. If the government buys trains from abroad, then even if they were cheaper than home-made trains it is highly likely that they have made a worse overall deal as that money will immediately leave the local economy. The Multiplier will be close to zero. <debt-up></debt-up><arrow></arrow><gni-flat></gni-flat></p>
-<h3>Education</h3>
+<ol start="3">
+<li><strong>Education</strong>
+</li>
+</ol>
 <p>Spending on school, teachers, university education, and university research.</p>
 <p>This is an interesting one, as the costs of education have ballooned over the last 50 years, even adjusting for inflation. University courses used to be free, and government spending on primary and secondary education was far lower per pupil. Teacher wages have fallen over the same period, so the money isn’t going there. And there hasn’t been any measurable increase in quality to justify this either. If anything, you’d expect advances in technology and manufacturing to decrease costs over time.</p>
 <p>This phenomenon where costs for services have risen disproportionately and for no clear reason is known as Cost Disease. Most education spending goes on Consumption so this will have a relatively high multiplier. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
-<h3>Healthcare</h3>
+<ol start="4">
+<li><strong>Healthcare</strong>
+</li>
+</ol>
 <p>Spending on doctors, hospitals, drug research</p>
 <p>Healthcare is a superior good, which means that as a country gets richer it will spend ever increasing amounts on it. It also suffers from the same Cost Disease as Education.</p>
 <p>Government healthcare spending can increase or decrease future GNI depending on how much of the expenditure ends up being paid as wages vs dividends or interest. Generally a public system will spend more on wages, and a private system will spend more on profits.</p>
@@ -51,7 +73,7 @@
 <h2>Productive Debt</h2>
 <p>We can define Debt (whether Private or Government) as productive if the benefits gained by the borrower are greater than the amount of interest they must pay. The benefits do not necessarily need to be financial - a student who borrows money for their education is often making a good long term decision.</p>
 <p>But attempting to quantify non-financial benefits is a fool’s errand - much better to give the borrowers some credit and assume that all Debt is <em>intended</em> to be productive. Ahead of time there is no guarantee that somebody’s new business will succeed, or that the value of their new house won’t crash, but in most cases these are not bad investments. Outside the extreme cases like borrowing to pay for an expensive wedding, or to fund an unsustainable lifestyle, Debt is not inherently a bad thing.</p>
-<p>We can assume that all new Debt is productive but with non-financial benefits, and then we must accept the fact that the costs are financial and the Debt will act as a drag on future GNI growth across the economy <debt-up></debt-up><arrow></arrow><income-down></income-down>.</p>
+<p>If we assume that all new Debt is productive but with non-financial benefits, then we must accept the fact that the costs are financial and the Debt will slow future GNI growth across the economy <debt-up></debt-up><arrow></arrow><income-down></income-down>.</p>
 <p>If we want the non-financial benefits of Debt then we must offset the drag on GNI growth with another source of new money that doesn’t have an ongoing cost. That source is the Bank of England.</p>
 <p>Next: <a href="11-monetary-policy.html">Monetary Policy</a></p>
 <script>

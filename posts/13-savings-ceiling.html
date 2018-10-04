@@ -18,23 +18,37 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126974518-1');
+    </script>
   </head>
 
   <body>
-    <main id="main">
+    <section style="position: absolute; top: 1vh; font-family: Menlo, Courier, monospace; color: red; font-weight: 700; font-size: 1.5rem;">DRAFT</section>
+<main id="main">
   <h1>13 Savings Ceiling</h1>
 <p>Recall that Savings are an Asset for their owners but a Liability for the rest of society since the interest or dividend they earn must come from somewhere.</p>
-<p>If the amount of Currency stays fixed, can the amount of Savings in the economy rise indefinitely?</p>
+<p>If the amount of <span class="bg-green-light border border-green px-2">Currency</span> stays fixed, can the amount of <span class="bg-orange-light border border-orange px-2">Savings</span> in the economy rise indefinitely?</p>
 <p>Imagine a world with very low Savings: almost all income would be Wages. If all of this was spent on Consumption then the Structural Multiplier would be far above 100%.
 <assets :assets="low_savings" classes="text-lg h-10"></assets>
 <assets :assets="low_savings_income" classes="h-6"></assets></p>
 <p>In contrast, imagine a world where most Wealth is Savings: most income would be interest or dividends and the asset distribution would look very different:
 <assets :assets="high_savings" classes="text-lg h-10"></assets>
 <assets :assets="high_savings_income" classes="h-6"></assets></p>
-<p>If the Savings were (reasonably) evenly spread across the population then this could be sustainable, but we know that in the real world there will be those with Savings and those without. The Structural Multiplier will be low, as a higher proportion of income will go to savers with a low Marginal Multiplier, and a lower proportion to workers with a high MM. The only way to keep growth up will be to encourage more Debt, and if this isn’t done, there will be a recession.</p>
-<p>At some high level of Savings the Structural Multiplier will be below 100%, and this leads us straight to the feedback loop of ever-increasing Debt that conventional monetary policy produces. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
-<p>If we want to build a self-sustaining economy without this cycle, there must be some cap on the total proportion of Wealth that can sustainably be Savings. Although we can’t actually determine what this is as it will depend on too many variables (future rates of return on all assets and the distribution of them across the population), we’ll call this the Savings Ceiling - it is the maximum proportion of Wealth that can be made up of Savings without causing a crash, and we know that it exists somewhere between 0% and 100%.</p>
-<p>Next: <a href="14-growth-part-2.html">Growth Part 2</a></p>
+<p>If ownership of the Savings were widely spread then this could be sustainable, but we know that in the real world there will be those with Savings and those without. The Structural Multiplier will be lower, as a higher proportion of income will go to savers with a low Marginal Multiplier, and a lower proportion to workers with a high MM.</p>
+<p>At some high level of Savings the Structural Multiplier will fall below 100%, and this leads us straight to the feedback loop of ever-increasing Debt that conventional monetary policy produces. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
+<h2>Conclusions</h2>
+<p>There must be some cap on the total proportion of Assets that can sustainably be Savings. Although we can’t actually determine what this is as it will depend on too many variables (future rates of return on all assets and the distribution of them across the population), we’ll call this the Savings Ceiling - it is the maximum proportion of Wealth that can be made up of Savings without leading to an inevitable crash, and we know that it exists somewhere between 0% and 100%.</p>
+<p><assets :assets="mid_savings" classes="text-lg h-10"></assets>
+<assets :assets="ceiling" classes="text-lg h-10 mt-2"></assets></p>
+<p>If we want to build a self-sustaining economy, we must prevent the proportion of Savings from growing indefinitely.</p>
+<p>Next: <a href="14-budget-decisions.html">Budget Decisions</a></p>
 <script>
     var data = {
         low_savings: [{ name: "Currency", color: "green-dark", class: "w-56 p-2" },
@@ -52,7 +66,12 @@
                                                     { name: "", color: "green-light", class: "w-1" },
                                                     { name: "Div.", color: "yellow-light", class: "w-16" },
                                                     { name: "Interest", color: "red-light", class: "w-24" },
-                                                    { name: "", class: "w-1/3" }]
+                                                    { name: "", class: "w-1/3" }],
+        mid_savings: [{ name: "Currency", color: "green-dark", class: "w-32 p-2" },
+                                    { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
+                                    { name: "Debt", color: "red-dark", class: "w-16 p-2" }],
+        ceiling: [{ name: "", color: "", class: "w-32 p-2" },
+                            { name: "Ceiling?", color: "orange-dark", class: "w-40 p-2" }]
     };
 </script>
 </main>
