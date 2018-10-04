@@ -2,7 +2,7 @@
 body {
     max-width: 900px;
     margin: 10vw auto;
-    padding: 0 8vw;
+    padding: 0 6vw 0vw 9vw;
     background: #fff1e0;
     color: rgb(30, 30, 30);
     font-family: "Cardo", Georgia, 'Times New Roman', Times, serif;
@@ -30,7 +30,8 @@ a {
     color: rgb(62, 162, 255);
 }
 
-ul {
+ul,
+ol {
     margin-top: 0rem;
     margin-bottom: 1rem;
 }
@@ -39,8 +40,13 @@ ul>li:first-child {
     margin-top: 0rem;
 }
 
+ul>li,
 ol>li {
     margin-left: -2.5rem;
+}
+
+blockquote>ul>li {
+    margin-left: -1rem;
 }
 
 code,

@@ -3,6 +3,7 @@
   <head>
     <title>11 Monetary Policy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/default.css">
@@ -40,31 +41,31 @@
 <h3>Temporary</h3>
 <p>Quantitative Easing (QE) is an example of a way to temporarily inject money into the economy.</p>
 <ul>
-<li>The Bank of England buys government bonds in exchange for Currency
+<li><p>The Bank of England buys government bonds in exchange for Currency</p>
 </li>
-<li>This reduces Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up>
+<li><p>This reduces Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up></p>
 </li>
-<li>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-down></currency-down>
+<li><p>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-down></currency-down></p>
 </li>
-<li>The government would replace this with new Debt, thus returning us to where we started <debt-up></debt-up>
+<li><p>The government would replace this with new Debt, thus returning us to where we started <debt-up></debt-up></p>
 </li>
-<li>Overall there is no net effect after the bond has matured <currency-flat></currency-flat><debt-flat></debt-flat>
+<li><p>Overall there is no net effect after the bond has matured <currency-flat></currency-flat><debt-flat></debt-flat></p>
+</li>
+<li><p>Before</p>
 </li>
 </ul>
-<div class="container w-2/3 flex">
-    <div class="w-16 text-left p-1 mr-4">Before</div>
-    <assets :assets="before" classes="h-8 w-64"></assets>
-</div><div class="w-104 text-center m-0">
-    <i class="fas fa-angle-down"></i>
-</div><div class="container w-2/3 flex align-center">
-    <div class="w-16 text-left p-1 mr-4">During</div>
-    <assets :assets="during" classes="h-8 w-64"></assets>
-</div><div class="w-104 text-center m-0">
-    <i class="fas fa-angle-down"></i>
-</div><div class="container w-2/3 flex">
-    <div class="w-16 text-left p-1 mr-4">After</div>
-    <assets :assets="after" classes="h-8 w-64"></assets>
-</div><p><code class="inline">Figure 1: Change in distribution of assets from QE</code></p>
+<p><assets :assets="before" classes="h-8 w-64"></assets></p>
+<ul>
+<li>During
+</li>
+</ul>
+<p><assets :assets="during" classes="h-8 w-64"></assets></p>
+<ul>
+<li>After
+</li>
+</ul>
+<p><assets :assets="after" classes="h-8 w-64"></assets></p>
+<p><code class="inline">Figure 1: Change in distribution of assets from QE</code></p>
 <p>Despite having only a temporary effect, QE does have a positive effect on GNI while it is active, via it’s effect on other asset prices.</p>
 <p>Raising the amount of Currency in circulation while keeping it’s demand constant will increase the value of Savings. This makes consumers and companies richer, encouraging them to spend more on Consumption and raising their Multipliers. <currency-up></currency-up><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-up></income-up></p>
 <h3>Permanent</h3>
