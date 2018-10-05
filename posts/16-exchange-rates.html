@@ -34,15 +34,20 @@
     <section class="draft">DRAFT</section>
 <main id="main">
   <h1>16 Exchange Rates</h1>
-<p>Spot
-GBPUSD = 1.3 =&gt; 1 GBP = 1.3 USD
+<p>GBPUSD Spot = 1.3 =&gt; 1 GBP = 1.3 USD
 USD Rate = 3%
 GBP Rate = 1%
-GBPUSD 1yF =</p>
-<p>1y interest rate parity =&gt;
-GBP 1 <em> 1.01 = GBP 1 </em> GBPUSD * 1.03 / GBPUSD 1yF
-GBP 1.01 = GBP 1.339 / GBPUSD 1yF
-GBPUSD 1yF =&gt; 1.3257</p>
+GBPUSD 1yF = GBPUSD Spot * (USD Rate / GBP Rate)</p>
+<p>=&gt; Higher interest rates imply fall in FX over time</p>
+<p>Suppose GBP rates rise. To keep parity, either:</p>
+<ol>
+<li>GBPUSD Spot rises (GBP strengthens)
+</li>
+<li>GBPUSD Forwards fall
+</li>
+</ol>
+<p>In practice both.</p>
+<p>a^x / b^x = (a/b)^x</p>
 <p>Next: <a href="17-empiricism.html">Empiricism</a></p>
 <script>
     var data = {};
