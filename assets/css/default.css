@@ -5,7 +5,7 @@ body {
     padding: 0 6vw 0vw 9vw;
     background: #fff1e0;
     color: rgb(30, 30, 30);
-    font-family: "Cardo", Georgia, 'Times New Roman', Times, serif;
+    font-family: "Cardo", Georgia, serif;
     font-size: 1.3em;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -51,7 +51,7 @@ blockquote>ul>li {
 
 code,
 pre {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Menlo, Courier, monospace;
     font-size: 0.9em;
     background: #efe1d0;
     color: black;
