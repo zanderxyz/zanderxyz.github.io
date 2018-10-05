@@ -45,11 +45,11 @@
 <p>If ownership of the Savings were widely spread then this could be sustainable, but we know that in the real world there will be those with Savings and those without. The Structural Multiplier will be lower, as a higher proportion of income will go to savers with a low Marginal Multiplier, and a lower proportion to workers with a high MM.</p>
 <p>At some high level of Savings the Structural Multiplier will fall below 100%, and this leads us straight to the feedback loop of ever-increasing Debt that conventional monetary policy produces. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
 <h2>Conclusions</h2>
-<p>There must be some cap on the total proportion of Assets that can sustainably be Savings. Although we can’t actually determine what this is as it will depend on too many variables (future rates of return on all assets and the distribution of them across the population), we’ll call this the Savings Ceiling - it is the maximum proportion of Wealth that can be made up of Savings without leading to an inevitable crash, and we know that it exists somewhere between 0% and 100%.</p>
+<p>At any time, there must be some cap on the total amount of Assets that can sustainably be Savings. Although we can’t actually determine what this is as it will depend on too many variables (future rates of return on all assets and the distribution of them across the population), we’ll call this the Savings Ceiling - it is the maximum amount of Assets that can be Savings without starting the feedback loop of ever-increasing Debt.</p>
 <p><assets :assets="mid_savings" classes="text-lg h-10"></assets>
 <assets :assets="ceiling" classes="text-lg h-10 mt-2"></assets></p>
 <p>If we want to build a self-sustaining economy, we must prevent the proportion of Savings from growing indefinitely.</p>
-<p>Next: <a href="15-budget-decisions.html">Budget Decisions</a></p>
+<p>Next: <a href="15-recessions.html">Recessions</a></p>
 <script>
     var data = {
         low_savings: [{ name: "Currency", color: "green-dark", class: "w-56 p-2" },
@@ -60,7 +60,7 @@
                                                     { name: "", color: "yellow-light", class: "w-4" },
                                                     { name: "", color: "red-light", class: "w-4" },
                                                     { name: "", class: "w-1/3" }],
-        high_savings: [{ name: "", color: "green-dark", class: "w-16 p-2" },
+        high_savings: [{ name: "Ccy", color: "green-dark", class: "w-16 p-2" },
                                     { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
                                     { name: "Debt", color: "red-dark", class: "w-32 p-2" }],
     high_savings_income: [{ name: "Wages", color: "blue-light", class: "w-16" },

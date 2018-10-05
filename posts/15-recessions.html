@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>15 Recessions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126974518-1');
+    </script>
+    <script src="https://s3-us-west-2.amazonaws.com/momently-static/loader/7QrriAAMAQs_momently.js" name="momently-script"></script>
+  </head>
+
+  <body>
+    <div class="draft">DRAFT</div>
+<main id="main">
+  <h1>15 Recessions</h1>
+<p>A recession is what we get when GNI shrinks from one year to the next. This lost income gives rise to an increase in unemployment and some businesses needing to close down. Expected future GNI growth falls, and the effects on Assets and Income are as follows:</p>
+<h2>Low Debt Society</h2>
+<p><ai-change :ab="low_before" :ib="low_before_income" :aa="low_after" :ia="low_after_income"></ai-change></p>
+<h2>High Debt Society</h2>
+<p><ai-change :ab="high_before" :ib="high_before_income" :aa="high_after" :ia="high_after_income"></ai-change></p>
+<h2>Effects</h2>
+<ul>
+<li><span class="bg-green-light border border-green px-2">Currency</span> &amp; <span class="bg-green-lighter border border-green-lightest px-2">Interest</span>
+</li>
+</ul>
+<p>No change</p>
+<ul>
+<li><span class="bg-yellow border border-yellow-dark px-2">Equity</span> &amp; <span class="bg-yellow-light border border-yellow-lighter px-2">Dividends</span>
+</li>
+</ul>
+<p>The value of Equity falls on lower growth expectations. Business profits fall, and companies cut their dividends to shareholders. Overall, Dividends fall by proportionally more than Equity.</p>
+<p>Dividends as a share of GNI fall in both cases.</p>
+<ul>
+<li><span class="bg-red-light border border-red px-2">Debt</span> &amp; <span class="bg-red-lighter border border-red-lightest px-2">Interest</span>
+</li>
+</ul>
+<p>The value of Debt falls on the higher likelihood of companies needing to default. As most Debt pays a fixed rate of interest, these interest payments do not change along with the fall in value. Debt Interest payments therefore only fall by a small amount in absolute terms.</p>
+<p>In the low debt society, Debt can be written off without causing a cascade of further defaults, and therefore Debt Interest payments fall as a share of GNI.</p>
+<p>In the high debt society, widespread defaults are untenable due to the high share of Debt Interest as a proportion of GNI. The Bank of England are forced to cut interest rates by more than they otherwise would, to prop up companies and prevent them defaulting. The government may also step in to bail out companies or industries that have systemic value. In this situation a lower proportion of the debtors default, and Debt Interest payments rise as a share of GNI.</p>
+<ul>
+<li><span class="bg-blue-lighter border border-blue-lightest px-2">Wages</span>
+</li>
+</ul>
+<p>Wages fall in absolute terms.</p>
+<p>In the low debt society, they actually rise as a share of GNI due to the falling share of Dividends and Interest.</p>
+<p>In the high debt society however, they fall as a share of GNI due to the rising share of GNI made up of Debt Interest payments.</p>
+<h2>Conclusions</h2>
+<p>In the low debt society, the economy seems well poised to bounce back. Wages as a share of <span class="bg-grey border border-grey-dark px-2">GNI</span> have risen, which suggests the Structural Multiplier will have risen too. The fall in <span class="bg-orange-light border border-orange px-2">Savings</span> likely means they are further from the Savings Ceiling than they were before.</p>
+<p>In the high debt society, things look very different. Although the value of <span class="bg-orange-light border border-orange px-2">Savings</span> have fallen, the share of <span class="bg-grey border border-grey-dark px-2">GNI</span> going to workers has fallen by even more, so we should expect a lower Structural Multiplier and an even lower Savings Ceiling.</p>
+<p>In a crash, <span class="bg-red-light border border-red px-2">Debt</span> cannot shrink the way that <span class="bg-yellow border border-yellow-dark px-2">Equity</span> can. This means that afterwards the choice for policymakers is often between sudden defaults or an overhang of Debt that will cause a drag on <span class="bg-grey-light border border-grey px-2">GNI growth</span> for years to come.</p>
+<p>This is exactly the situation we were left with after the 2008 financial crisis. The slow response from the Bank of England to the start of the trouble forced the government into bailing out the banking industry, and this has left an excess of Debt hanging over society. It is highly likely that total Savings are currently greater than the Savings Ceiling.</p>
+<p>Next: <a href="16-budget-decisions.html">Budget Decisions</a></p>
+<script>
+    var data = {
+        low_before: [{ name: "Ccy", color: "green-dark", class: "w-36 p-2" },
+                                    { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
+                                    { name: "Debt", color: "red-dark", class: "w-16 p-2" }],
+    low_before_income: [{ name: "Wages", color: "blue-light", class: "w-40" },
+                                                { name: "", color: "green-light", class: "w-4" },
+                                                { name: "Div.", color: "yellow-light", class: "w-16" },
+                                                { name: "Int.", color: "red-light", class: "w-12" }, { class: "w-4"}],
+        low_after: [{ name: "Ccy", color: "green-dark", class: "w-36 p-2" },
+                                { name: "Equity", color: "yellow-dark", class: "w-16 p-2" },
+                                { name: "Debt", color: "red-dark", class: "w-12 p-2" }],
+    low_after_income: [{ name: "Wages", color: "blue-light", class: "w-36" },
+                                                { name: "", color: "green-light", class: "w-4" },
+                                                { name: "Div.", color: "yellow-light", class: "w-8" },
+                                                { name: "Int.", color: "red-light", class: "w-8" }, { class: "w-4"}],
+        high_before: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
+                                    { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
+                                    { name: "Debt", color: "red-dark", class: "w-34 p-2" }],
+    high_before_income: [{ name: "Wages", color: "blue-light", class: "w-30" },
+                                                { name: "", color: "green-light", class: "w-2" },
+                                                { name: "Div.", color: "yellow-light", class: "w-16" },
+                                                { name: "Interest", color: "red-light", class: "w-24" }, { class: "w-4"}],
+        high_after: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
+                                { name: "Equity", color: "yellow-dark", class: "w-16 p-2" },
+                                { name: "Debt", color: "red-dark", class: "w-30 p-2" }],
+    high_after_income: [{ name: "Wages", color: "blue-light", class: "w-24" },
+                                                { name: "", color: "green-light", class: "w-2" },
+                                                { name: "Div.", color: "yellow-light", class: "w-8" },
+                                                { name: "Interest", color: "red-light", class: "w-22" }, { class: "w-4"}],
+    };
+</script>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

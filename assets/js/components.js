@@ -70,13 +70,23 @@ Vue.component('assets-liabilities', {
   template: '<div :class="classes"><div class="container flex"><assets v-bind:assets="assets" class="mt-1"></assets></div><div class="container flex"><assets v-bind:assets="liabilities" classes="mt-1"></assets></div></div>'
 })
 
+Vue.component('assets-income', {
+  props: ['assets', 'income', 'classes'],
+  template: '<div :class="classes"><div class="container flex"><assets v-bind:assets="assets" class="text-lg h-10"></assets></div><div class="container flex"><assets v-bind:assets="income" classes="h-6 mt-2"></assets></div></div>'
+})
+
 Vue.component('arrow-rightdown', {
   template: '<div class="text-center md:p-5 mt-1 md:mt-0"><i class="fas fa-angle-down md:hidden"></i><i class="fas fa-angle-right hidden md:flex"></i></div>'
 })
 
 Vue.component('al-change', {
-  props: ['ab', 'aa', 'lb', 'la'],
-  template: '<div class="mt-1 md:inline-flex"><assets-liabilities v-bind:assets="ab" v-bind:liabilities="lb"></assets-liabilities><arrow-rightdown></arrow-rightdown><assets-liabilities v-bind:assets="aa" v-bind:liabilities="la"></assets-liabilities></div>'
+  props: ['ab', 'aa', 'lb', 'la', 'classes'],
+  template: '<div class="my-1 md:inline-flex" :class="classes"><assets-liabilities v-bind:assets="ab" v-bind:liabilities="lb"></assets-liabilities><arrow-rightdown></arrow-rightdown><assets-liabilities v-bind:assets="aa" v-bind:liabilities="la"></assets-liabilities></div>'
+})
+
+Vue.component('ai-change', {
+  props: ['ab', 'aa', 'ib', 'ia', 'classes'],
+  template: '<div class="my-1 md:inline-flex" :class="classes"><assets-income v-bind:assets="ab" v-bind:income="ib"></assets-income><arrow-rightdown></arrow-rightdown><assets-income v-bind:assets="aa" v-bind:income="ia"></assets-income></div>'
 })
 
 Vue.component('arrow', {
