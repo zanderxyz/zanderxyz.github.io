@@ -359,38 +359,28 @@ Vue.component('ca-down', {
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
 })
 
-Vue.component('exports', {
+Vue.component('mult-up', {
   data: function () {
     return {
-      icons: [{ icon: "fa-angle-left", color: "grey-light", class: "w-4" }]
+      icons: [{ icon: "fa-sort-up", color: "blue-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
 })
 
-Vue.component('imports', {
+Vue.component('mult-down', {
   data: function () {
     return {
-      icons: [{ icon: "fa-angle-right", color: "grey-light", class: "w-4" }]
+      icons: [{ icon: "fa-sort-down", color: "blue-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
 })
 
-Vue.component('overseas', {
-  data: function () {
-    return {
-      icons: [{ icon: "fa-angle-left", color: "grey-dark", class: "w-4" }]
-    }
-  },
-  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+Vue.component('mult', {
+  template: '<span class="text-blue"><i class="far fa-times-circle"></i></span>'
 })
 
-Vue.component('foreign', {
-  data: function () {
-    return {
-      icons: [{ icon: "fa-angle-right", color: "grey-dark", class: "w-4" }]
-    }
-  },
-  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+Vue.component('sm', {
+  template: '<span class="text-blue"><i class="fas fa-times-circle"></i></span>'
 })
