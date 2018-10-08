@@ -34,27 +34,30 @@
     <div class="draft">DRAFT</div>
 <main id="main">
   <h1>12 Monetary Policy</h1>
+<p>Monetary policy primarily acts by changing expectations of the future state of the economy.</p>
 <h2>Conventional</h2>
-<p>The Bank of England changes policy by adjusting the Bank Rate, which is the rate of <span class="bg-green-lighter border border-green-lightest px-2">Interest</span> they pay on <span class="bg-green-light border border-green px-2">Currency</span> deposited with them by commercial banks. This rate affects the economy via two mechanisms:</p>
+<p>The Bank of England changes policy by adjusting the Bank Rate, which is the rate of <span class="bg-green-lighter border border-green-lightest px-2">Interest</span> they pay on <span class="bg-green-light border border-green px-2">Currency</span> deposited with them by commercial banks. This rate affects the economy directly via two mechanisms:</p>
 <ol>
-<li><p>A lower Bank Rate decreases the demand from banks for Currency, and increases their demand for Savings, raising their price. More valuable Savings make consumers and companies richer, raising their Multipliers and encouraging them to spend more on Consumption. <cinterest-down></cinterest-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><mult-up></mult-up><gni-up></gni-up><income-up></income-up></p>
+<li><p>A lower Bank Rate decreases the demand from banks for Currency, and increases their demand for Savings, raising their price. More valuable Savings make consumers and companies richer, temporarily encouraging them to spend more on Consumption. <cinterest-down></cinterest-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-up></income-up></p>
 </li>
-<li><p>A lower Bank Rate also leads to lower rates on deposits and mortgages. This encourages consumers and companies to borrow and spend, causing more debt to be issued and increasing GNI. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><equity-up></equity-up><gni-up></gni-up><income-down></income-down></p>
+<li><p>Although the Bank Rate doesn’t directly affect interest rates on Debt, a lower Bank Rate generally leads to lower market rates on deposits and mortgages as well. This encourages consumers and companies to borrow and spend, causing more Debt to be issued and increasing GNI. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><equity-up></equity-up><gni-up></gni-up><income-down></income-down></p>
 </li>
 </ol>
 <p>Raising the policy rate has the opposite effects:
-<cinterest-up></cinterest-up><arrow></arrow><interest-up></interest-up><equity-down></equity-down><mult-down></mult-down><gni-down></gni-down></p>
-<p>Notice that raising rates doesn’t actually decrease the amount of Debt, just discourages any further increase. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will temporarily increase the total amount of Debt and slow GNI growth until it is paid back. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
-<p>This approach has worked very well for a long time, but always ends up increasing the total amount of Debt. As Debt slows GNI growth, even more Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession.</p>
-<p>Conventional monetary policy cannot keep working indefinitely - it is a feedback loop of ever-increasing debt and a falling Structural Multiplier. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
+<cinterest-up></cinterest-up><arrow></arrow><interest-up></interest-up><debt-down></debt-down><equity-down></equity-down><gni-down></gni-down></p>
+<blockquote><p>The Bank of England is in a uniquely powerful position within the economy, and market rates will often adjust without the Bank needing to do anything. If the Bank’s target is well understood, markets will move in advance of any changes to the Bank Rate, which can even lead to situations where the Bank Rate never needs to move in the first place.</p>
+</blockquote>
+<p>Notice that raising the Bank Rate doesn’t actually decrease the amount of Debt, just discourages further increases. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will temporarily increase the total amount of Debt and slow GNI growth until it is paid back. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
+<p>This approach has worked for a long time, but always ends up increasing the total amount of Debt. As Debt slows GNI growth, even more Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession.</p>
+<p>Conventional monetary policy cannot keep working indefinitely - it is a feedback loop of ever-increasing Debt and a falling Structural Multiplier. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
 <h2>Unconventional</h2>
-<p>Surprisingly, unconventional policy is actually much simpler: the Bank of England can increase or decrease the amount of <span class="bg-green-light border border-green px-2">Currency</span> in circulation, either temporarily or permanently.</p>
+<p>Unconventional policy is actually much simpler: the Bank of England can increase or decrease the amount of <span class="bg-green-light border border-green px-2">Currency</span> in circulation, either temporarily or permanently.</p>
 <h3>Temporary</h3>
-<p>Quantitative Easing (QE) is a way to achieve this temporarily.</p>
+<p>Quantitative Easing (QE) is a way of achieving a temporary increase, by directly purchasing government bonds from existing bondholders.</p>
 <ul>
 <li>The Bank of England buys government bonds in exchange for Currency
 </li>
-<li>This reduces Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up>
+<li>This reduces outstanding Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up>
 </li>
 <li>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-down></currency-down>
 </li>
@@ -73,8 +76,7 @@
     <div class="w-16 h-10 text-left p-1 mr-4">After</div>
     <assets v-bind:assets="after" classes="mb-1 h-8 w-64"></assets>
 </div><p><code class="inline">Change in distribution of assets from QE</code></p>
-<p>Despite having only a temporary effect, QE does have a positive effect on GNI while it is active, via its effect on other asset prices.</p>
-<p>Raising the amount of <span class="bg-green-light border border-green px-2">Currency</span> in circulation while keeping it’s demand constant will increase the value of Savings. This makes consumers and companies richer, raising their Multipliers and encouraging them to spend more on Consumption. <currency-up></currency-up><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><mult-up></mult-up><gni-up></gni-up><income-up></income-up></p>
+<p>Although only temporary, while it is active QE works primarily through it’s affect on other asset prices. Raising the amount of <span class="bg-green-light border border-green px-2">Currency</span> in circulation without changing demand for it will increase the value of Savings. This makes the holders of these Savings richer, temporarily encouraging them to spend more on Consumption. <currency-up></currency-up><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up><income-up></income-up></p>
 <h3>Permanent</h3>
 <p>A more permanent way to achieve a similar effect would be for the Bank of England to print <span class="bg-green-light border border-green px-2">Currency</span> and spend it on <span class="bg-blue-light border border-blue px-2">Consumption</span>.</p>
 <p>This would directly raise income as the money is spent, but suffers from a very significant flaw: choosing where to spend the money is inherently political. It seems wrong to have an unelected central bank deciding where to target this, while the government and opposition argue about where tax rises and cuts should fall. This is also a solid criticism of QE, since it targets banks and bondholders. Are they really the most in need of help?</p>
@@ -85,16 +87,13 @@
     var data = {
         before: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
                         { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
-                        { name: "Debt", color: "red-dark", class: "w-24 pt-1" },
-                        { name: "", color: "red-dark", class: "w-8 pt-1" }],
-        during: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
-                        { name: "", color: "green-dark", class: "w-8 pt-1" },
+                        { name: "Debt", color: "red-dark", class: "w-32 pt-1" }],
+        during: [{ name: "Currency", color: "green-dark", class: "w-24 pt-1" },
                         { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
                         { name: "Debt", color: "red-dark", class: "w-24 pt-1" }],
         after: [{ name: "Currency", color: "green-dark", class: "w-16 pt-1" },
                         { name: "Equity", color: "yellow-dark", class: "w-16 pt-1" },
-                        { name: "Debt", color: "red-dark", class: "w-24 pt-1" },
-                        { name: "", color: "red-dark", class: "w-8 pt-1" }]
+                        { name: "Debt", color: "red-dark", class: "w-32 pt-1" }]
     };
 </script>
 </main>
