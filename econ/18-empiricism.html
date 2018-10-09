@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>18 Empiricism</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ]}});</script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/assets/js/components.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-126974518-1');</script>
+    <script src="https://s3-us-west-2.amazonaws.com/momently-static/loader/7QrriAAMAQs_momently.js" name="momently-script"></script>
+  </head>
+  <body>
+    <main id="main">
+  <div class="draft">DRAFT</div>
+  <h1>18 Empiricism</h1>
+<p>At this stage, I would like to conclude with a quantitative model demonstrating the causal link between high debt and slowing GDP growth, amongst other things. I could run a series of multivariate regressions, and attempt to quantify concepts like the Savings Ceiling and the Structural Multiplier.</p>
+<p>But I’m not going to do those things, because any conclusions drawn would very likely be bogus.</p>
+<h2>An explanation by analogy</h2>
+<p>(This choice of analogy borrowed from <a href="http://worthwhile.typepad.com/worthwhile_canadian_initi/2012/07/why-are-almost-all-economists-unaware-of-milton-friedmans-thermostat.html">Nick Rowe</a>)</p>
+<p>Imagine you are the passenger in a car while the driver is trying to keep a constant speed as the car travels along a hilly road. In real life, you know that, all else equal:</p>
+<ul>
+<li>The driver pressing the accelerator speeds up the car, and vice versa
+</li>
+<li>The car going uphill slows down the car, and vice versa
+</li>
+</ul>
+<p>Imagine you didn’t know those things, and you observe three different drivers:</p>
+<ol>
+<li>A perfectly skilled driver who manages to keep their speed perfectly constant
+</li>
+</ol>
+<p>Suppose you run a multivariate regression on speed against accelerator and hills. You’d learn nothing, as accelerator and hills will be perfectly colinear, and uncorrelated with speed. You’d have to draw the conclusion that neither accelerators nor hills have any effect on the speed of cars.</p>
+<ol start="2">
+<li>A skilled driver who sometimes makes mistakes, but is correct on average
+</li>
+</ol>
+<p>This driver sometimes presses down on the accelerator too much or too little, and the speed of the car varies over the course of your journey. After you run your regression however, you still see zero correlation between speed &amp; accelerator or speed &amp; hills.</p>
+<p>In reality, what you are regressing here is not speed, but the driver’s forecast of their speed. That’s why we get zero correlation, as the driver is correct on average.</p>
+<ol start="3">
+<li>An unskilled driver who over-estimates the power of their car
+</li>
+</ol>
+<p>The final driver may deviate significantly from a constant speed, and finally your regressions will show results! But this time they’ll be the wrong way round - you’ll see a negative correlation between accelerator and speed.</p>
+<p>Once again, this is because you’re really regressing against the driver’s forecast, so your negative correlation is between accelerator and the driver’s forecast of their speed.</p>
+<h2>What’s going on here?</h2>
+<p>To generalise, if a skilled policymaker is observing information $I$ in order to adjust a variable $V$ such that another variable $T$ hits it’s static target $T*$, then observations of $T$ will be uncorrelated with $V$ and with anything in $I$. It’s even worse if the policymaker is unskilled, as the correlations you discover might be in the wrong direction.</p>
+<p>The policymakers here are the Bank of England, and to a lesser extent the government. Their targets can be inflation, or GDP growth, or unemployment (it varies). Their information is <em>everything they can observe</em>, so unless you are able to find a variable uncorrelated with anything they may have looked at, you’re out of luck. It is therefore exceedingly difficult to tease out the true relationships between economic variables, and this problem applies far more widely than to just my model here.</p>
+<h2>Why should we trust Bank of England forecasts?</h2>
+<p>They’re the driver. Only the driver is able to accurately estimate the relationship between the variables they observe and their target, as they’re the only ones who know their own reaction function.</p>
+<p>Central banks across the world haven’t done a bad job since the 2008 financial crisis, but the problems that led to that crash still haven’t been fixed.</p>
+<p>Next: <a href="19-this-all-makes-sense-but.html">This all makes sense, but..</a></p>
+<script>
+    var data = {};
+</script>
+  <div class="menu">
+    Back to: <a href="index.html">Table of Contents</a>
+  </div>
+</main>
+<script>
+  new Vue({el: '#main', data: data});
+</script>
+  </body>
+</html>

@@ -9,27 +9,13 @@
     <link rel="stylesheet" href="/assets/css/default.css">
     <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
-        }
-      });
-    </script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ]}});</script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-126974518-1');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-126974518-1');</script>
     <script src="https://s3-us-west-2.amazonaws.com/momently-static/loader/7QrriAAMAQs_momently.js" name="momently-script"></script>
   </head>
-
   <body>
     <main id="main">
   <div class="draft">DRAFT</div>
@@ -40,7 +26,7 @@
 <ol>
 <li><p>A lower Bank Rate decreases the demand from banks for Currency, and increases their demand for Savings, raising their price. More valuable Savings make consumers and companies richer, temporarily encouraging them to spend more on Consumption. <cinterest-down></cinterest-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 </li>
-<li><p>Although the Bank Rate doesn’t directly affect interest rates on Debt, a lower Bank Rate generally leads to lower market rates on deposits and mortgages as well. This encourages consumers and companies to borrow and spend, causing more Debt to be issued and increasing GNI. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><equity-up></equity-up><gni-up></gni-up></p>
+<li><p>Although the Bank Rate doesn’t directly affect interest rates on Debt, a lower Bank Rate generally leads to lower market rates on deposits and mortgages as well. This encourages consumers and companies to borrow and spend, causing more Debt to be issued and increasing GNI. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 </li>
 </ol>
 <p>Raising the policy rate has the opposite effects:
@@ -48,12 +34,12 @@
 <blockquote><p>The Bank of England is in a uniquely powerful position within the economy, and market rates will often adjust without the Bank needing to do anything. If the Bank’s target is well understood, markets will move in advance of any changes to the Bank Rate, which can even lead to situations where the Bank Rate never needs to move in the first place.</p>
 </blockquote>
 <p>Notice that raising the Bank Rate doesn’t actually decrease the amount of Debt, just discourages further increases. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will temporarily increase the total amount of Debt and slow GNI growth until it is paid back. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
-<h3>The Problems</h3>
+<h3>Problems</h3>
 <p>This approach has worked for a long time, but each of its two transmission mechanisms causes a positive feedback loop:</p>
 <ol>
-<li><p>Increases income indirectly by increasing the value of Savings. This is a back-to-front approach, and will mean incomes falling relative to total wealth. This means a falling share of GNI going to Wages, and a lower Structural Multiplier. <equity-up></equity-up><debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><cycle></cycle></p>
+<li><p>Increases income indirectly by increasing the value of Savings. This is a back-to-front approach, and will mean incomes falling relative to total wealth. This means a falling share of GNI going to Wages, and a lower Structural Multiplier. <equity-up></equity-up><debt-up></debt-up><arrow></arrow><dividends-up></dividends-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><cycle></cycle></p>
 </li>
-<li><p>Increases income by encouraging more Debt. As Debt slows GNI growth, even more Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession. <debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
+<li><p>Increases income by encouraging more Debt. As Debt slows GNI growth, even more Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession. <debt-up></debt-up><arrow></arrow><interest-up></interest-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
 </li>
 </ol>
 <p>The combination of these two effects mean that conventional monetary policy cannot keep working indefinitely.</p>
@@ -88,7 +74,7 @@
 </blockquote>
 <h3>Permanent</h3>
 <p>A more sustainable way to achieve a similar effect would be for the Bank of England to print <span class="bg-green-light border border-green px-2">Currency</span> and spend it on <span class="bg-blue-light border border-blue px-2">Consumption</span>. This would directly raise income as the money is spent, increasing both GNI and the Structural Multiplier. <currency-up></currency-up><arrow></arrow><gni-up></gni-up><mult-up></mult-up><income-up></income-up></p>
-<blockquote><p>If the Bank of England is credible enough with its targets, the expectation of Currency being printed if required may keep GNI on track to meet those targets</p>
+<blockquote><p>If the Bank of England is credible enough with its targets, the expectation of Currency being printed if required will help to keep GNI on track to meet those targets</p>
 </blockquote>
 <p>However, this approach suffers from a very significant flaw: choosing where to spend the money is inherently political. It seems wrong to have an unelected central bank deciding where to target this, while the government and opposition argue about where tax rises and cuts should fall. This is also a solid criticism of QE, since it targets banks and bondholders. Are they really the most in need of help?</p>
 <p>Furthermore, remember that our targets for GNI growth are symmetric - if growth is too high one year then we need a way to remove the new money from circulation. This is difficult for the Bank of England to achieve by themselves.</p>

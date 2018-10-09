@@ -9,27 +9,13 @@
     <link rel="stylesheet" href="/assets/css/default.css">
     <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
-        }
-      });
-    </script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ]}});</script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-126974518-1');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-126974518-1');</script>
     <script src="https://s3-us-west-2.amazonaws.com/momently-static/loader/7QrriAAMAQs_momently.js" name="momently-script"></script>
   </head>
-
   <body>
     <main id="main">
   <div class="draft">DRAFT</div>
@@ -44,7 +30,7 @@
 <ul>
 <li>Before, we have a commercial bank and a borrower.
 </li>
-<li>The assets for the bank are Currency, some Equity and previous loans they have made, while their liabilities are deposits, as they have borrowed this money from consumers
+<li>The assets for the bank are Currency, some Equity, and previous loans they have made, while their liabilities are deposits, as they have borrowed this money from consumers
 </li>
 <li>The assets for the borrower are Currency and deposits, offset by other liabilities
 </li>
@@ -65,8 +51,8 @@
 <li><strong>Business Investment</strong>
 </li>
 </ol>
-<p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be Wages or Consumption and thus become income for others.
-<debt-up></debt-up><arrow></arrow><equity-up></equity-up><dividends-up></dividends-up><gni-up></gni-up></p>
+<p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be on Wages or Consumption and thus become income for others.
+<debt-up></debt-up><arrow></arrow><equity-up></equity-up><dividends-up></dividends-up><wages-up></wages-up><gni-up></gni-up></p>
 <h2>Corporate Bonds</h2>
 <p>The second type of “new money” via Private Debt comes from bonds issued by companies and sold to investors.</p>
 <h3>Company</h3>
@@ -76,15 +62,15 @@
 <ul>
 <li>Before the loan, both the company and investor have a mix of assets on hand. The company’s liabilities are mostly existing bonds.
 </li>
-<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits move to the company from the investor.
+<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits are paid to the company from the investor.
 </li>
 </ul>
 <p>There has been no net increase in deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which is again a net increase in Debt <debt-up></debt-up>. As this bond is a comparatively risky investment, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
-<p>The answer is that it doesn’t, but it does move bank deposits from an investor (unlikely to spend them) to a company (who is more likely to, as they must have a reason for issuing the bond). This should increase the Multiplier for that deposit, and therefore increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>The answer is that it doesn’t do so directly, but it does move bank deposits from an investor (unlikely to spend them) to a company (who is more likely to, as they must have a reason for issuing the bond). This should increase the Multiplier for that deposit, and therefore increase GNI. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
 <p>If the company is a strong credit who is very unlikely to default, then the bond will also act somewhat similarly to money, also a net positive for GNI.</p>
 <h2>Effects on Growth</h2>
 <p>In both of the above cases, an investor spends deposits to purchase Debt, and a borrower issues the Debt and receives deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate but temporary boost to GNI as this money is spent. <debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
-<p>However, this initial transfer is not the only time money changes hands under a loan. Every time interest is paid, it goes from the borrower (high MM) to the investor (low MM), which will lower the Structural Multiplier <sm></sm> and act as an ongoing drag on GNI. <debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
+<p>However, this initial transfer is not the only time money changes hands under a loan. Every time interest is paid, it goes from the borrower (high MM) to the investor (low MM), which will lower the Structural Multiplier and act as an ongoing drag on GNI. <debt-up></debt-up><arrow></arrow><interest-up></interest-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
 <p>So although new Private Debt has an initial positive effect on GNI when taken out, it will slow GNI growth until it is paid back. <debt-up></debt-up><arrow></arrow><gni-up></gni-up><mult-down></mult-down><income-down></income-down></p>
 <p>Next: <a href="11-government-debt.html">Government Debt</a></p>
 <script>

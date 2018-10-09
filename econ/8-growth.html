@@ -9,27 +9,13 @@
     <link rel="stylesheet" href="/assets/css/default.css">
     <link rel="stylesheet" href="/assets/css/tailwind-extra.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ]
-        }
-      });
-    </script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ]}});</script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="/assets/js/components.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126974518-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-126974518-1');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-126974518-1');</script>
     <script src="https://s3-us-west-2.amazonaws.com/momently-static/loader/7QrriAAMAQs_momently.js" name="momently-script"></script>
   </head>
-
   <body>
     <main id="main">
   <div class="draft">DRAFT</div>
@@ -41,7 +27,7 @@
 <li>What proportion of existing Savings are spent
 </li>
 </ul>
-<blockquote><p>$GNI_{n+1} = m_n GNI_n + m_s c S_n$
+<blockquote><p>$GNI_{n+1} = m_n GNI_n + m_s c_n S_n$
 <br><br>
 where:</p>
 <ul>
@@ -51,7 +37,7 @@ where:</p>
 </li>
 <li>$S_n$ is the total of existing Savings in year n
 </li>
-<li>$c$ is the proportion of existing Savings that are spent each year
+<li>$c_n$ is the proportion of existing Savings that are spent each year
 </li>
 <li>$m_s$ is the Multiplier <mult></mult> on the spent Savings
 </li>
@@ -66,7 +52,7 @@ where:</p>
 <li>Creating and spending new money
 </li>
 </ul>
-<p>In order for GNI to grow by 5-7% per year, we need the Structural Multiplier <sm></sm> to be  close to or above 100% (depending on the proportion of existing savings that are spent). If it isn’t, then new money will have to be created and spent each year in order to grow GNI enough to avoid a recession.</p>
+<p>In order for GNI to grow by 5-7% per year, we need the Structural Multiplier <sm></sm> to be  close to or above 100% (depending on the proportion of existing savings that are spent). If it isn’t, then new money will have to be created and spent each year in order to grow GNI enough to meet our targets.</p>
 <p>Next: <a href="9-money.html">Money</a></p>
 <script>
     var data = {};
