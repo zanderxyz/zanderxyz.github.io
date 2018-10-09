@@ -31,15 +31,15 @@
   </head>
 
   <body>
-    <div class="draft">DRAFT</div>
-<main id="main">
+    <main id="main">
+  <div class="draft">DRAFT</div>
   <h1>15 Recessions</h1>
-<p>A recession is what we get when GNI shrinks from one year to the next. This lost income gives rise to an increase in unemployment and some businesses needing to close down. Expected future GNI growth falls, and the effects on Assets and Income are as follows:</p>
+<p>A recession is what we get when GNI shrinks from one year to the next. This lost income gives rise to an increase in unemployment and some businesses needing to close down. Expected future GNI growth falls, and the impact on Assets and Income are as follows:</p>
 <h2>Low Debt Society</h2>
 <p><ai-change :ab="low_before" :ib="low_before_income" :aa="low_after" :ia="low_after_income"></ai-change></p>
 <h2>High Debt Society</h2>
 <p><ai-change :ab="high_before" :ib="high_before_income" :aa="high_after" :ia="high_after_income"></ai-change></p>
-<h2>Effects</h2>
+<h2>Impact</h2>
 <ul>
 <li><span class="bg-green-light border border-green px-2">Currency</span> &amp; <span class="bg-green-lighter border border-green-lightest px-2">Interest</span>
 </li>
@@ -68,7 +68,7 @@
 <h2>After Effects</h2>
 <p>In the low debt society, the economy seems well poised to bounce back. Wages as a share of <span class="bg-grey border border-grey-dark px-2">GNI</span> have risen, which suggests the Structural Multiplier will have risen too <mult-up></mult-up>.</p>
 <p>In the high debt society, things look very different. Although the value of <span class="bg-orange-light border border-orange px-2">Savings</span> have fallen, the share of <span class="bg-grey border border-grey-dark px-2">GNI</span> going to workers has fallen by even more, so we should expect a lower Structural Multiplier <mult-down></mult-down> and a lower Savings Ceiling.</p>
-<p>In a crash, <span class="bg-red-light border border-red px-2">Debt</span> cannot shrink the way that <span class="bg-yellow border border-yellow-dark px-2">Equity</span> can. This means that afterwards, the choice for policymakers is often between sudden defaults or an overhang of Debt that will cause a drag on GNI growth for years to come <income-down></income-down>.</p>
+<p>In a crash, <span class="bg-red-light border border-red px-2">Debt</span> cannot contract smoothly the way that <span class="bg-yellow border border-yellow-dark px-2">Equity</span> can. This means that afterwards the choice for policymakers is often between sudden defaults or an overhang of Debt that will cause a drag on GNI growth for years to come <income-down></income-down>.</p>
 <p>This is exactly what happened in the United Kingdom during and after the 2008 financial crisis. The slow response from the Bank of England to the start of the trouble in 2007 forced the government into bailing out the banking industry, and this has left an excess of Debt hanging over society. It is highly likely that total Savings are currently greater than the Savings Ceiling.</p>
 <p>Next: <a href="16-austerity.html">Austerity</a></p>
 <script>
@@ -103,6 +103,9 @@
                                                 { name: "Interest", color: "red-light", class: "w-22" }, { class: "w-4"}],
     };
 </script>
+  <div class="menu">
+    Back to: <a href="index.html">Table of Contents</a>
+  </div>
 </main>
 <script>
   new Vue({el: '#main', data: data});
