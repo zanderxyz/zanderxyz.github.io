@@ -21,15 +21,11 @@
   <div class="draft">DRAFT</div>
   <h1>6 Stability</h1>
 <p>Now we can start to think about policy - we want our economy to be stable and consistent. We can aim for this in two ways:</p>
-<h2>Unemployment</h2>
-<p>Whenever unemployment rises sharply, there is a risk that some people struggle to get back into work during the recovery and end up unemployed for a long time. This is a deadweight loss to society, and a stable unemployment rate will help avoid it.</p>
-<p>A major driver for/symptom of sharp rises in unemployment is a fall in total wages paid to workers. If the total wage paid ever shrinks from one year to the next, then, given most workers are on fixed salary contracts, some of them must lose their jobs.</p>
-<blockquote><p>Total <span class="bg-blue-light border border-blue px-1">Wages</span> must rise every year</p>
-</blockquote>
 <h2>Shared Growth</h2>
 <p>We want to ensure that people who borrow money (to start or grow businesses, or to buy houses) or lend it (banks creating new money for loans, or people investing their savings) have confidence that future growth won’t be skewed in favour of the other side of the loan. If all growth goes to borrowers, or all goes to lenders, this will skew incentives and create unnecessary volatility and instability.</p>
 <h3>Inflation Targeting</h3>
-<p>The Bank of England currently targets a low and stable inflation rate of 2%. If this is successfully achieved, then the real value of the interest paid on any fixed-rate loan will be the same regardless of what has happened to real GNI. This means lenders are guaranteed to receive the same real payment regardless of what happens to the economy, but borrowers are fully exposed to changes in real GNI growth. During periods of faster than expected growth, borrowers will profit from this, but in periods where growth is slower they will lose out.</p>
+<p>The Bank of England currently targets a low and stable inflation rate of 2% per annum. If they are successful, and annual inflation stays constant over time, then the real value of any future nominal payment will be known in advance. Specifically, the real value of the interest paid on any fixed-rate loan will not be affected by changes in real GNI.</p>
+<p>This means lenders are guaranteed to receive the same real payment regardless of what happens to the economy, but borrowers are fully exposed to changes in real GNI growth. During periods of faster than expected growth, borrowers will profit from this, but in periods where growth is slower they will lose out.</p>
 <blockquote><p>As growth has been slowing since the post-war boom, this has acted for years as a hidden transfer of income from borrowers to lenders.</p>
 </blockquote>
 <p>If inflation targeting doesn’t work, what can we do instead?</p>
@@ -44,9 +40,103 @@
 <p>To fix this, the Bank of England can promise to make up for any errors - if nominal GNI grows too fast one year then in future years it must grow more slowly to ensure the target is met on average. Rather than looking at annual growth rates, targets for the level of nominal GNI in future years should be set and those targets should not be changed if growth temporarily varies. If nominal GNI undershoots, everyone would know that it is expected to catch up in future, and if it overshoots, everyone would know it will slow down. This prevents both extended depressions and periods of hyperinflation.</p>
 <blockquote><p>The Bank of England must target the level of <span class="bg-grey border border-grey-dark px-1">GNI</span> across a range of future years, and promise to make up for any mistakes</p>
 </blockquote>
-<h2>Our Target</h2>
-<p>The safe way to hit all of these targets is to aim for <span class="bg-grey-light border border-grey-lighter px-1">GNI growth</span> well above 0%, such as 5-7%. That way, even if growth is slower one year, <span class="bg-blue-light border border-blue px-1">Wages</span>
-should still rise and a recession can be avoided.</p>
+<h2>Unemployment</h2>
+<p>Avoiding sudden rises in unemployment is the reason why we need nominal growth at all. If total Wages fall from one year to the next, then, given most workers are on fixed salary contracts, some of them must have lost their jobs.</p>
+<p>To avoid this, we target <span class="bg-grey-light border border-grey-lighter px-1">GNI growth</span> of comfortably higher than 0%. That way, even if growth is slow one year, <span class="bg-blue-light border border-blue px-1">Wages</span> should still rise and a recession can be avoided.</p>
+<blockquote><p>The <span class="bg-grey-light border border-grey-lighter px-1">GNI growth</span> target must be positive, to ensure total <span class="bg-blue-light border border-blue px-1">Wages</span> rise every year</p>
+</blockquote>
+<h2>Historic GDP Growth</h2>
+<p>Using Gross Domestic Product as a proxy for GNI, we can observe historic trends to determine what growth rates are reasonable to target.</p>
+<p>Nominal GDP growth ran at 7.3% in the 1960s, 16.1% in the 1970s, 10.7% in the 1980s, 5.3% in the 1990s, 4.1% in the 2000s, and 2.8% through to June 2018.</p>
+<p>Looking more closely at the trend figures over time, we can see that trend growth was very stable at 5.05% from 1990 to 2007, but since the low point in 2009 it has only run at 3.62%.</p>
+<div id="plot"></div><p><script src="https://cdn.plot.ly/plotly-latest.min.js"></script></p>
+<script>
+  var ngdp = {
+    x: ["1990 Q4", "1991 Q1", "1991 Q2", "1991 Q3",
+        "1991 Q4", "1992 Q1", "1992 Q2", "1992 Q3", "1992 Q4", "1993 Q1", "1993 Q2",
+        "1993 Q3", "1993 Q4", "1994 Q1", "1994 Q2", "1994 Q3", "1994 Q4", "1995 Q1",
+        "1995 Q2", "1995 Q3", "1995 Q4", "1996 Q1", "1996 Q2", "1996 Q3", "1996 Q4",
+        "1997 Q1", "1997 Q2", "1997 Q3", "1997 Q4", "1998 Q1", "1998 Q2", "1998 Q3",
+        "1998 Q4", "1999 Q1", "1999 Q2", "1999 Q3", "1999 Q4", "2000 Q1", "2000 Q2",
+        "2000 Q3", "2000 Q4", "2001 Q1", "2001 Q2", "2001 Q3", "2001 Q4", "2002 Q1",
+        "2002 Q2", "2002 Q3", "2002 Q4", "2003 Q1", "2003 Q2", "2003 Q3", "2003 Q4",
+        "2004 Q1", "2004 Q2", "2004 Q3", "2004 Q4", "2005 Q1", "2005 Q2", "2005 Q3",
+        "2005 Q4", "2006 Q1", "2006 Q2", "2006 Q3", "2006 Q4", "2007 Q1", "2007 Q2",
+        "2007 Q3", "2007 Q4", "2008 Q1", "2008 Q2", "2008 Q3", "2008 Q4", "2009 Q1",
+        "2009 Q2", "2009 Q3", "2009 Q4", "2010 Q1", "2010 Q2", "2010 Q3", "2010 Q4",
+        "2011 Q1", "2011 Q2", "2011 Q3", "2011 Q4", "2012 Q1", "2012 Q2", "2012 Q3",
+        "2012 Q4", "2013 Q1", "2013 Q2", "2013 Q3", "2013 Q4", "2014 Q1", "2014 Q2",
+        "2014 Q3", "2014 Q4", "2015 Q1", "2015 Q2", "2015 Q3", "2015 Q4", "2016 Q1",
+        "2016 Q2", "2016 Q3", "2016 Q4", "2017 Q1", "2017 Q2", "2017 Q3", "2017 Q4",
+        "2018 Q1", "2018 Q2"],
+        y: [667435,678559,687283,694472,703728,711492,717581,722555,727965,736200,744518,755783,766408,775578,786019,795283,806420,815425,825253,836686,846536,859753,875052,889454,903432,915611,925668,939407,948953,959532,969945,976101,991238,1004504,1013743,1023888,1031158,1042993,1060166,1076299,1089341,1098678,1109344,1118669,1129443,1141412,1151992,1166105,1182956,1200595,1217308,1234309,1251847,1267512,1285869,1300783,1312854,1326989,1344422,1363898,1388753,1412673,1431555,1451140,1465902,1482862,1499974,1519969,1541442,1562650,1578110,1584212,1579796,1563625,1549007,1539850,1537213,1545491,1560282,1572710,1587466,1607470,1619009,1631374,1644546,1650902,1660213,1678699,1694417,1709904,1728113,1743711,1761347,1782241,1806630,1827014,1844295,1857707,1872240,1883051,1895839,1913870,1928135,1946324,1969524,1990431,2009844,2029593,2047941,2063686,2080507],
+    type: 'lines',
+        name: 'Actual'
+  };
+
+    var trend1 = {
+    x: ["1990 Q4", "1991 Q1", "1991 Q2", "1991 Q3",
+        "1991 Q4", "1992 Q1", "1992 Q2", "1992 Q3", "1992 Q4", "1993 Q1", "1993 Q2",
+        "1993 Q3", "1993 Q4", "1994 Q1", "1994 Q2", "1994 Q3", "1994 Q4", "1995 Q1",
+        "1995 Q2", "1995 Q3", "1995 Q4", "1996 Q1", "1996 Q2", "1996 Q3", "1996 Q4",
+        "1997 Q1", "1997 Q2", "1997 Q3", "1997 Q4", "1998 Q1", "1998 Q2", "1998 Q3",
+        "1998 Q4", "1999 Q1", "1999 Q2", "1999 Q3", "1999 Q4", "2000 Q1", "2000 Q2",
+        "2000 Q3", "2000 Q4", "2001 Q1", "2001 Q2", "2001 Q3", "2001 Q4", "2002 Q1",
+        "2002 Q2", "2002 Q3", "2002 Q4", "2003 Q1", "2003 Q2", "2003 Q3", "2003 Q4",
+        "2004 Q1", "2004 Q2", "2004 Q3", "2004 Q4", "2005 Q1", "2005 Q2", "2005 Q3",
+        "2005 Q4", "2006 Q1", "2006 Q2", "2006 Q3", "2006 Q4", "2007 Q1", "2007 Q2",
+        "2007 Q3", "2007 Q4", "2008 Q1", "2008 Q2", "2008 Q3", "2008 Q4", "2009 Q1",
+        "2009 Q2", "2009 Q3", "2009 Q4", "2010 Q1", "2010 Q2", "2010 Q3", "2010 Q4",
+        "2011 Q1", "2011 Q2", "2011 Q3", "2011 Q4", "2012 Q1", "2012 Q2", "2012 Q3",
+        "2012 Q4", "2013 Q1", "2013 Q2", "2013 Q3", "2013 Q4", "2014 Q1", "2014 Q2",
+        "2014 Q3", "2014 Q4", "2015 Q1", "2015 Q2", "2015 Q3", "2015 Q4", "2016 Q1",
+        "2016 Q2", "2016 Q3", "2016 Q4", "2017 Q1", "2017 Q2", "2017 Q3", "2017 Q4",
+        "2018 Q1", "2018 Q2"],
+    y: [667435,675701.4224,684070.2275,692542.6832,701120.0733,709803.6975,718594.8715,727494.9274,736505.2136,745627.0955,754861.9551,764211.1918,773676.2222,783258.4804,792959.4183,802780.5057,812723.2309,822789.1004,832979.6392,843296.3915,853740.9205,864314.8088,875019.6584,885857.0915,896828.75,907936.2966,919181.414,930565.8063,942091.1984,953759.3366,965571.9889,977530.9451,989638.0173,1001895.04,1014303.87,1026866.388,1039584.498,1052460.126,1065495.223,1078691.764,1092051.749,1105577.203,1119270.174,1133132.738,1147166.994,1161375.07,1175759.117,1190321.317,1205063.874,1219989.024,1235099.026,1250396.172,1265882.778,1281561.191,1297433.787,1313502.971,1329771.178,1346240.872,1362914.549,1379794.736,1396883.99,1414184.9,1431700.089,1449432.209,1467383.948,1485558.026,1503957.196,1522584.247,1541442,1560533.313,1579861.08,1599428.227,1619237.721,1639292.562,1659595.79,1680150.48,1700959.748,1722026.746,1743354.666,1764946.741,1786806.241,1808936.478,1831340.807,1854022.621,1876985.358,1900232.497,1923767.559,1947594.112,1971715.766,1996136.174,2020859.038,2045888.104,2071227.164,2096880.057,2122850.67,2149142.939,2175760.847,2202708.428,2229989.763,2257608.988,2285570.287,2313877.897,2342536.107,2371549.259,2400921.749,2430658.028,2460762.602,2491240.031,2522094.935,2553331.987,2584955.922],
+    type: 'lines',
+        name: '1990 -> 2007 Trend (5.05% p.a.)',
+        line: {
+            dash: 'dash'
+        }
+  };
+
+    var trend2 = {
+    x: ["2009 Q4", "2010 Q1", "2010 Q2", "2010 Q3", "2010 Q4",
+        "2011 Q1", "2011 Q2", "2011 Q3", "2011 Q4", "2012 Q1", "2012 Q2", "2012 Q3",
+        "2012 Q4", "2013 Q1", "2013 Q2", "2013 Q3", "2013 Q4", "2014 Q1", "2014 Q2",
+        "2014 Q3", "2014 Q4", "2015 Q1", "2015 Q2", "2015 Q3", "2015 Q4", "2016 Q1",
+        "2016 Q2", "2016 Q3", "2016 Q4", "2017 Q1", "2017 Q2", "2017 Q3", "2017 Q4",
+        "2018 Q1", "2018 Q2"],
+    y: [1537213,1550957.109,1564824.103,1578815.081,1592931.151,1607173.432,1621543.052,1636041.15,1650668.874,1665427.384,1680317.849,1695341.448,1710499.372,1725792.821,1741223.009,1756791.156,1772498.498,1788346.277,1804335.75,1820468.184,1836744.857,1853167.059,1869736.09,1886453.264,1903319.904,1920337.348,1937506.944,1954830.052,1972308.045,1989942.307,2007734.235,2025685.24,2043796.744,2062070.181,2080507],
+    type: 'lines',
+        name: '2009 -> 2018 Trend (3.62% p.a.)',
+        line: {
+            dash: 'dash',
+            color: 'rgb(255, 0, 0)'
+        }
+  };
+
+  var data = [ngdp, trend1, trend2];
+
+  var layout = {
+    title: 'United Kingdom 4Q Trailing Nominal GDP £million',
+    plot_bgcolor: "rgb(255,241,224)",
+    paper_bgcolor: "rgb(255,241,224)",
+    margin: 0,
+        legend: {
+            x: 0.01, y: 1.025
+        },
+        xaxis: {
+            tickvals: ['1990 Q4', '1991 Q4', '1992 Q4', '1993 Q4', '1994 Q4', '1995 Q4', '1996 Q4', '1997 Q4', '1998 Q4', '1999 Q4', '2000 Q4', '2001 Q4', '2002 Q4', '2003 Q4', '2004 Q4', '2005 Q4', '2006 Q4', '2007 Q4', '2008 Q4', '2009 Q4', '2010 Q4', '2011 Q4', '2012 Q4', '2013 Q4', '2014 Q4', '2015 Q4', '2016 Q4', '2017 Q4'],
+      ticktext: ['1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']
+        }
+  };
+
+  Plotly.newPlot('plot', data, layout, { displayModeBar: false });
+</script><h2>New Target</h2>
+<p>If I was selecting a new target now, a return to the 1990-2007 trend rate of 5% per year seems reasonable. It could also be argued that a temporarily higher rate of 7 or 8% could be appropriate for 5-10 years, in an attempt to ‘catch back up’ to the old trend line.</p>
+<p>Ultimately the exact target chosen is somewhat arbitrary, and the most important thing is setting a new permanent target. We can see in the chart above how growth suddenly switched to a lower path after the financial crisis of 2008, and after future crises this must be avoided.</p>
+<h3>Importance of Nominal Growth</h3>
 <p>It is important to emphasise that our targets for GNI growth are nominal, not real. Naturally the government and Bank of England should care about long-term real growth, but if they do so at the cost of nominal growth then they risk causing unnecessary volatility and damage to the economy.</p>
 <p>It is stable nominal growth that builds the foundations that we need to achieve long-term prosperity.</p>
 <p>Next: <a href="7-inflation.html">Inflation</a></p>
