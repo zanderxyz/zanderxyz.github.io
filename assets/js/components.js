@@ -14,6 +14,10 @@ var colors = {
   'orange-dark': 'bg-orange border border-orange-dark',
   'purple-light': 'bg-purple-lighter border border-purple-lightest',
   'purple-dark': 'bg-purple-light border border-purple',
+  'indigo-light': 'bg-indigo-lightest border border-white',
+  'indigo-dark': 'bg-indigo-lighter border border-indigo-light',
+  'teal-light': 'bg-teal-lighter border border-teal-lightest',
+  'teal-dark': 'bg-teal-light border border-teal',
   'grey-light': 'bg-grey-light border border-grey-lighter',
   'grey-dark': 'bg-grey border border-grey-dark'
 };
@@ -31,9 +35,23 @@ var text_colors = {
   'orange-dark': 'text-orange-dark',
   'purple-light': 'text-purple-dark',
   'purple-dark': 'text-purple-lightest',
+  'indigo-light': 'text-indigo-dark',
+  'indigo-dark': 'text-indigo-lightest',
+  'teal-light': 'text-teal-dark',
+  'teal-dark': 'text-teal-lightest',
   'grey-light': 'text-grey-dark',
   'grey-dark': 'text-grey-lightest'
 }
+
+Vue.component('ctext', {
+  props: ['text', 'color'],
+  computed: {
+    colorClasses() {
+      return colors[this.color]
+    }
+  },
+  template: '<span class="px-1" :class="colorClasses">{{ text }}</span>'
+})
 
 Vue.component('bar', {
   props: ['name', 'icon', 'color', 'classes'],
@@ -93,32 +111,45 @@ Vue.component('arrow', {
   template: '<span class="text-sm mx-1"><i class="fas fa-long-arrow-alt-right"></i></span>'
 })
 
+Vue.component('arrow-b', {
+  template: '<span class="text-sm mx-1"><i class="fas fa-long-arrow-alt-left"></i></span>'
+})
+
 Vue.component('cycle', {
   template: '<span class="text-sm ml-1"><i class="fas fa-redo"></i></span>'
 })
 
-Vue.component('currency-up', {
+Vue.component('currency-plus', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-up", color: "green-dark", class: "w-4" }]
+      icons: [{ icon: "fa-plus", color: "green-dark", class: "w-4 text-xs" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
 })
 
-Vue.component('currency-flat', {
+Vue.component('currency-minus', {
   data: function () {
     return {
-      icons: [{ name: "-", color: "green-dark", class: "w-4" }]
+      icons: [{ icon: "fa-minus", color: "green-dark", class: "w-4 text-xs" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
 })
 
-Vue.component('currency-down', {
+Vue.component('depo-plus', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-down", color: "green-dark", class: "w-4" }]
+      icons: [{ icon: "fa-plus", color: "teal-dark", class: "w-4 text-xs" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('depo-minus', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-minus", color: "teal-dark", class: "w-4 text-xs" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -172,7 +203,25 @@ Vue.component('debt-flat', {
 Vue.component('debt-down', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-down", color: "red-dark", class: "w-4" }]
+      icons: [{ icon: "fa-sort-down", color: "red-dark", class: "w-4 text-xs" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('debt-plus', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-plus", color: "red-dark", class: "w-4 text-xs" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('debt-minus', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-minus", color: "red-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -200,6 +249,33 @@ Vue.component('cinterest-down', {
   data: function () {
     return {
       icons: [{ icon: "fa-sort-down", color: "green-light", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('dinterest-up', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-up", color: "purple-light", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('dinterest-flat', {
+  data: function () {
+    return {
+      icons: [{ name: "-", color: "purple-light", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('dinterest-down', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-down", color: "purple-light", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -344,7 +420,7 @@ Vue.component('gni-down', {
 Vue.component('ca-up', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-up", color: "purple-dark", class: "w-4" }]
+      icons: [{ icon: "fa-sort-up", color: "pink-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -353,7 +429,7 @@ Vue.component('ca-up', {
 Vue.component('ca-down', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-down", color: "purple-dark", class: "w-4" }]
+      icons: [{ icon: "fa-sort-down", color: "pink-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'

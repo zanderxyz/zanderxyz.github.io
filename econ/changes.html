@@ -19,24 +19,64 @@
   <body>
     <main id="main">
   <div class="draft">DRAFT</div>
-  <p>Amounts</p>
+  <p><strong>Colours</strong></p>
 <ul>
-<li>Spent on Equity <currency-up></currency-up><arrow></arrow><gni-up></gni-up><equity-up></equity-up>
+<li><span class="bg-grey border border-grey-dark px-1">GNI</span><span class="bg-grey-light border border-grey-lighter px-1">GNI Growth</span>
 </li>
-<li>Spent on Debt <currency-up></currency-up><arrow></arrow><gni-up></gni-up><debt-up></debt-up>
+<li><span class="bg-green-light border border-green px-1">Currency</span><span class="bg-green-lighter border border-green-lightest px-1">Interest</span>
 </li>
-<li>Spent on Consumption <currency-up></currency-up><arrow></arrow><gni-up></gni-up><wages-up></wages-up>
+<li><span class="bg-teal-light border border-teal px-1">Deposits</span><span class="bg-teal-lighter border border-teal-lightest px-1">Interest</span>
 </li>
-<li><equity-up></equity-up><arrow></arrow><dividends-up></dividends-up>
+<li><span class="bg-red-light border border-red px-1">Debt</span><span class="bg-red-lighter border border-red-lightest px-1">Interest</span>
 </li>
-<li><debt-up></debt-up><arrow></arrow><gni-up></gni-up><interest-up></interest-up>
+<li><span class="bg-yellow border border-yellow-dark px-1">Equity</span><span class="bg-yellow-light border border-yellow-lighter px-1">Dividends</span>
+</li>
+<li><span class="bg-blue-light border border-blue px-1">Consumption</span><span class="bg-blue-lighter border border-blue-lightest px-1">Wages</span>
+</li>
+<li><span class="bg-orange-light border border-orange px-1"></span><span class="bg-orange-lighter border border-orange-lightest px-1"></span>
+</li>
+<li><span class="bg-pink-light border border-pink px-1">Current Account</span><span class="bg-pink-lighter border border-pink-lightest px-1"></span>
+</li>
+<li><span class="bg-purple-light border border-purple px-1">Savings</span><span class="bg-purple-lighter border border-purple-lightest px-1"></span>
+</li>
+<li><span class="bg-indigo-lighter border border-indigo-light px-1">Money</span><span class="bg-indigo-lightest border border-white px-1"></span>
+</li>
+</ul>
+<p><ctext color="green-dark" text="Currency"></ctext>
+Currency    Green
+Deposits    Blue
+Debt            Red
+Equity      Yellow
+Deposits + Debt + Equity = Savings  Orange
+Currency + Deposits = Money                 Teal
+GNI                         Grey
+GNI Growth          Light Grey
+Multiplier          Purple
+Foreign Trade       Pink</p>
+<p>Amounts</p>
+<ul>
+<li><currency-plus></currency-plus><arrow></arrow><equity-up></equity-up><debt-up></debt-up>
+</li>
+<li><currency-minus></currency-minus><arrow></arrow><equity-down></equity-down><debt-down></debt-down>
+</li>
+<li><depo-plus></depo-plus><arrow></arrow><equity-up></equity-up><debt-up></debt-up>
+</li>
+<li><depo-minus></depo-minus><arrow></arrow><equity-down></equity-down><debt-down></debt-down>
+</li>
+<li><debt-plus></debt-plus><arrow></arrow><gni-up></gni-up><interest-up></interest-up>
+</li>
+<li><debt-minus></debt-minus><arrow></arrow><gni-down></gni-down><interest-down></interest-down>
 </li>
 </ul>
 <p>Values</p>
 <ul>
 <li><equity-up></equity-up><arrow></arrow><dividends-up></dividends-up>
 </li>
+<li><equity-down></equity-down><arrow></arrow><dividends-down></dividends-down>
+</li>
 <li><debt-up></debt-up><arrow></arrow><interest-flat></interest-flat>
+</li>
+<li><debt-down></debt-down><arrow></arrow><interest-flat></interest-flat>
 </li>
 </ul>
 <p>Returns</p>
@@ -45,9 +85,9 @@
 </li>
 <li><cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down>
 </li>
-<li><dividends-up></dividends-up><arrow></arrow><wages-down></wages-down>
+<li><dividends-up></dividends-up><arrow></arrow><equity-up></equity-up><wages-down></wages-down>
 </li>
-<li><dividends-down></dividends-down><arrow></arrow><wages-up></wages-up>
+<li><dividends-down></dividends-down><arrow></arrow><equity-down></equity-down><wages-up></wages-up>
 </li>
 <li><interest-up></interest-up><arrow></arrow><wages-down></wages-down>
 </li>
