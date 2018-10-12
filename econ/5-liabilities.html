@@ -20,7 +20,7 @@
     <main id="main">
   <div class="draft">DRAFT</div>
   <h1>5 Liabilities</h1>
-<p>Liabilities are the opposite side of the balance sheet from Assets. Just as <span class="bg-orange-light border border-orange px-2">Savings</span> are an Asset to the person receiving income from it, Savings are a Liability for the people paying that income.</p>
+<p>Liabilities are the opposite side of the balance sheet from Assets. Just as <ctext color="orange-dark" text="Savings"></ctext> are an Asset to the person receiving income from it, they are a Liability for the people paying that income.</p>
 <h3>Example - Property and Mortgages</h3>
 <p>A landlord who rents out a house has Equity in the house as an Asset, and their mortgage as a liability (we assume here that 20% is paid off):
 <assets-liabilities :assets="house" :liabilities="mortgage" classes="w-64"></assets-liabilities></p>
@@ -31,15 +31,17 @@
 <h2>Conclusions</h2>
 <p>Looked at more generally, for our three types of Asset:</p>
 <ul>
-<li><p><ctext color="green-dark" text="Currency"></ctext> is only ever a liability of the Bank of England, as they are the only ones that can produce it</p>
+<li><p><ctext color="green-dark" text="Currency"></ctext> is only ever a liability of the Bank of England</p>
+</li>
+<li><p><ctext color="teal-dark" text="Deposits"></ctext> are only ever a liability of banks</p>
 </li>
 <li><p><ctext color="yellow-dark" text="Equity"></ctext> and <ctext color="red-dark" text="Debt"></ctext> are liabilities of whoever is paying the <ctext color="yellow-light" text="Dividends"></ctext> or <ctext color="red-light" text="Interest"></ctext>. At first this is the company who issued the Equity or Debt, but the company is just a middle man - ultimately the dividends and interest are paid by consumers who buy products from the company.</p>
 </li>
 </ul>
-<blockquote><p>Considered across the whole of society, <span class="bg-orange-light border border-orange px-2">Savings</span> are a Liability for everyone.</p>
+<blockquote><p>Considered across the whole of society, <ctext color="yellow-dark" text="Equity"></ctext> and <ctext color="red-dark" text="Debt"></ctext> are a Liability for everyone.</p>
 </blockquote>
 <p>This is a great example of how our model differs from the real world by design. Even though the customers of a company are benefiting from the arrangement through the products they buy, in our financial model we only see the downside from their perspective - the money they must pay.</p>
-<p>If the proportion of Assets made up of Savings grows <equity-up></equity-up><debt-up></debt-up> then this will lead to Dividend and Interest payments comprising a higher share of GNI <dividends-up></dividends-up><interest-up></interest-up>, and Wages a lower share <wages-down></wages-down>.</p>
+<p>TODO Delete? If the proportion of GNI made up of Savings grows <equity-up></equity-up><debt-up></debt-up> then this will lead to Dividend and Interest payments comprising a higher share of GNI <dividends-up></dividends-up><interest-up></interest-up>, and Wages a lower share <wages-down></wages-down>.</p>
 <p>Next: <a href="6-stability.html">Stability</a></p>
 <script>
     var data = {
