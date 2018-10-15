@@ -20,23 +20,18 @@
     <main id="main">
   <div class="draft">DRAFT</div>
   <h1>2 Income</h1>
-<p>We can continue by categorising all income into five groups that are closely related to the Asset groups:</p>
+<p>We can continue by categorising all income into groups that are closely related to the Asset groups:</p>
 <ol>
 <li><ctext color="green-light" text="Interest"></ctext> - Return on <ctext color="green-dark" text="Currency"></ctext>
 </li>
 </ol>
 <p>As banknotes and coins earn no interest, banks are the only ones who can receive interest on Currency. They do this by depositing it with the Bank of England, and are paid the Bank Rate in return.</p>
 <ol start="2">
-<li><ctext color="teal-light" text="Interest"></ctext> - Return on <ctext color="teal-dark" text="Deposits"></ctext>
-</li>
-</ol>
-<p>The interest rate on bank accounts is usually closely tied to the Bank Rate. Currently this is very low, so many bank accounts pay no interest.</p>
-<ol start="3">
 <li><ctext color="red-light" text="Interest"></ctext> - Return on <ctext color="red-dark" text="Debt"></ctext>
 </li>
 </ol>
-<p>Almost all Debt pays Interest of some kind, usually a fixed amount per year.</p>
-<ol start="4">
+<p>All Debt pays interest of some kind, usually a fixed amount per year.</p>
+<ol start="3">
 <li><ctext color="yellow-light" text="Dividends"></ctext> - Return on <ctext color="yellow-dark" text="Equity"></ctext>
 </li>
 </ol>
@@ -47,7 +42,7 @@
 <li>Rent paid to a landlord who rents out a house
 </li>
 </ul>
-<ol start="5">
+<ol start="4">
 <li><ctext color="blue-light" text="Wages"></ctext>
 </li>
 </ol>
@@ -62,15 +57,13 @@
 <p>Next: <a href="3-spending.html">Spending</a></p>
 <script>
     var data = {
-    assets: [{ name: "Ccy", color: "green-dark", class: "w-16 p-2" },
-            { name: "Deposits", color: "teal-dark", class: "w-24 p-2" },
-            { name: "Debt", color: "red-dark", class: "w-24 p-2" },
-                        { name: "Equity", color: "yellow-dark", class: "w-20 p-2" }],
+    assets: [{ name: "Ccy", color: "green-dark", class: "w-24 p-2" },
+            { name: "Equity", color: "yellow-dark", class: "w-28 p-2" },
+            { name: "Debt", color: "red-dark", class: "w-32 p-2" }],
     income: [{ name: "Wages", color: "blue-light", class: "w-36" },
             { name: "", color: "green-light", class: "w-4" },
-            { name: "", color: "teal-light", class: "w-4" },
-            { name: "Interest", color: "red-light", class: "w-20" },
-                        { name: "Dividends", color: "yellow-light", class: "w-16" }]
+            { name: "Dividends", color: "yellow-light", class: "w-20" },
+            { name: "Interest", color: "red-light", class: "w-20" },]
     };
 </script>
   <div class="menu">

@@ -21,7 +21,7 @@
   <div class="draft">DRAFT</div>
   <h1>10 Private Debt</h1>
 <h2>Bank Loans</h2>
-<p>The majority of new <ctext color="purple-dark" text="Money"></ctext> created in the economy is created by banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account in the form of a <ctext color="teal-dark" text="Deposit"></ctext>. The amount lent by banks is constrained by how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements.</p>
+<p>The majority of new <ctext color="purple-dark" text="Money"></ctext> created in the economy is created by banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account. The amount lent by banks is constrained by consumer demand, how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements.</p>
 <p>This is explained in a <a href="https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf?la=en&hash=9A8788FD44A62D8BB927123544205CE476E01654">Bank of England report</a> on the subject. We can see this most clearly using an asset liability diagram.</p>
 <h3>Bank</h3>
 <p><al-change :ab="bankab" :aa="bankaa" :lb="banklb" :la="bankla"></al-change></p>
@@ -39,20 +39,20 @@
 <li>The bank now owns the new loan as an asset, and has an offsetting increase in Deposits on the liability side
 </li>
 </ul>
-<p>Since Deposits are money, there has been a strict increase in Money in circulation along with an increase in Debt. <debt-plus></debt-plus><depo-plus></depo-plus><money-plus></money-plus></p>
-<p>After the new Deposit is spent it will contribute to GNI, so it will have a Multiplier <mult></mult> just like normal income.</p>
+<p>Since deposits are money, there has been a strict increase in money in circulation along with an increase in Debt. <debt-plus></debt-plus><money-plus></money-plus></p>
+<p>After the new deposit is spent it will contribute to GNI, so it will have a Multiplier <mult></mult> just like normal income.</p>
 <h3>Examples</h3>
 <ol>
 <li><strong>Mortgages</strong>
 </li>
 </ol>
-<p>Borrowing to buy a house will generally have a low Multiplier, as in most cases the seller will just re-spend the money on a different house or other Savings. Few people sell a house then spend the proceeds on Consumption. This kind of borrowing therefore leads to an increase in house prices, but only a limited increase in GNI. <debt-plus></debt-plus><depo-plus></depo-plus><arrow></arrow><equity-up></equity-up><gni-flat></gni-flat></p>
-<ol start="2">
+<p>Borrowing to buy a house will generally have a low Multiplier, as in most cases the seller will just re-spend the money on a different house or other Savings. Few people sell a house then spend the proceeds on Consumption. This kind of borrowing therefore leads to an increase in house prices, but only a limited increase in GNI. <debt-plus></debt-plus><money-plus></money-plus><arrow></arrow><equity-up></equity-up><gni-flat></gni-flat></p>
+<ol>
 <li><strong>Business Investment</strong>
 </li>
 </ol>
 <p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be on Consumption or Wages and thus become income for others.
-<debt-plus></debt-plus><depo-plus></depo-plus><arrow></arrow><mult-up></mult-up><wages-up></wages-up><gni-up></gni-up></p>
+<debt-plus></debt-plus><money-plus></money-plus><arrow></arrow><mult-up></mult-up><wages-up></wages-up><gni-up></gni-up></p>
 <h2>Corporate Bonds</h2>
 <p>The second type of “new money” via Private Debt comes from bonds issued by companies and sold to investors.</p>
 <h3>Company</h3>
@@ -78,36 +78,36 @@
         bankab: [{ name: "Currency", color: "green-dark", class: "w-16" },
                     { name: "Equity", color: "yellow-dark", class: "w-16" },
                     { name: "Loans", color: "red-dark", class: "w-32" }],
-        banklb: [{ name: "Deposits", color: "teal-dark", class: "w-64" }],
+        banklb: [{ name: "Deposits", color: "red-dark", class: "w-64" }],
         bankaa: [{ id: 1, name: "Currency", color: "green-dark", class: "w-16" },
                     { name: "Equity", color: "yellow-dark", class: "w-16" },
                     { name: "Debt", color: "red-dark", class: "w-32" },
                     { name: "Loan", color: "red-dark-new", class: "w-16" }],
-        bankla: [{ name: "Deposits", color: "teal-dark", class: "w-64" },
-                    { name: "Deposit", color: "teal-dark-new", class: "w-16" }],
+        bankla: [{ name: "Deposits", color: "red-dark", class: "w-64" },
+                    { name: "Deposit", color: "red-dark-new", class: "w-16" }],
         borrowerab: [{ name: "Currency", color: "green-dark", class: "w-16" },
-                    { name: "Deposits", color: "teal-dark", class: "w-32" },
+                    { name: "Deposits", color: "red-dark", class: "w-32" },
                     { class: "w-16" }],
     borrowerlb: [{ name: "Various", color: "grey-dark", class: "w-48" }],
     borroweraa: [{ name: "Currency", color: "green-dark", class: "w-16" },
-                    { name: "Deposits", color: "teal-dark", class: "w-32" },
-                    { name: "Deposit", color: "teal-dark-new", class: "w-16" }],
+                    { name: "Deposits", color: "red-dark", class: "w-32" },
+                    { name: "Deposit", color: "red-dark-new", class: "w-16" }],
     borrowerla: [{ name: "Various", color: "grey-dark", class: "w-48" },
                         { name: "Loan", color: "red-dark-new", class: "w-16" }],
         companyab: [{name: "Equity", color: "yellow-dark", class: "w-32"},
-                                {name: "Deposits", color: "teal-dark", class: "w-32"}],
+                                {name: "Deposits", color: "red-dark", class: "w-32"}],
         companylb: [{name: "Bonds", color: "red-dark", class: "w-64"}],
         companyaa: [{name: "Equity", color: "yellow-dark", class: "w-32"},
-                                {name: "Deposits", color: "teal-dark", class: "w-32"},
-                                {name: "Deposit", color: "teal-dark-new", class: "w-16"}],
+                                {name: "Deposits", color: "red-dark", class: "w-32"},
+                                {name: "Deposit", color: "red-dark-new", class: "w-16"}],
         companyla: [{name: "Bonds", color: "red-dark", class: "w-64"},
                                 {name: "Bond", color: "red-dark-new", class: "w-16"}],
         investorab: [{ name: "Currency", color: "green-dark", class: "w-16" },
-                                { name: "Deposits", color: "teal-dark", class: "w-32" },
+                                { name: "Deposits", color: "red-dark", class: "w-32" },
                                 { class: "w-16" }],
         investorlb: [{ name: "Various", color: "grey-dark", class: "w-48" }],
         investoraa: [{ name: "Currency", color: "green-dark", class: "w-16" },
-                                { name: "Deposits", color: "teal-dark", class: "w-16" },
+                                { name: "Deposits", color: "red-dark", class: "w-16" },
                                 { name: "Bond", color: "red-dark-new", class: "w-16" },
                                 { class: "w-16" }],
         investorla: [{ name: "Various", color: "grey-dark", class: "w-48" }]

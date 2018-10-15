@@ -34,8 +34,8 @@ var text_colors = {
   'yellow-dark': 'text-white',
   'blue-light': 'text-blue-dark',
   'blue-dark': 'text-blue-lightest',
-  'orange-light': 'text-orange-lighter',
-  'orange-dark': 'text-orange-dark',
+  'orange-light': 'text-orange-dark',
+  'orange-dark': 'text-orange-lightest',
   'purple-light': 'text-purple-dark',
   'purple-dark': 'text-purple-lightest',
   'pink-light': 'text-pink-dark',
@@ -200,6 +200,24 @@ Vue.component('equity-down', {
   data: function () {
     return {
       icons: [{ icon: "fa-sort-down", color: "yellow-dark", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('savings-up', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-up", color: "orange-dark", class: "w-4" }]
+    }
+  },
+  template: '<assets-icons v-bind:assets="icons"></assets-icons>'
+})
+
+Vue.component('savings-down', {
+  data: function () {
+    return {
+      icons: [{ icon: "fa-sort-down", color: "orange-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'

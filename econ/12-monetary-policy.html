@@ -20,44 +20,31 @@
     <main id="main">
   <div class="draft">DRAFT</div>
   <h1>12 Monetary Policy</h1>
-<p>TODO Rewrite completely</p>
-<p>Monetary policy primarily acts by changing expectations of the future state of the economy.</p>
-<h2>Conventional</h2>
-<p>The Bank of England changes policy by adjusting the Bank Rate, which is the rate of <ctext color="green-light" text="Interest"></ctext> they pay on <ctext color="green-dark" text="Currency"></ctext> deposited with them by banks. This rate affects the economy directly via two mechanisms:</p>
-<ol>
-<li><p>A lower Bank Rate decreases the demand from banks for Currency, and increases their demand for Savings, raising their price. More valuable Savings make consumers and companies richer, temporarily encouraging them to spend more on Consumption. <cinterest-down></cinterest-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
-</li>
-<li><p>Although the Bank Rate doesn’t directly affect interest rates on Debt, a lower Bank Rate generally leads to lower market rates on deposits and mortgages as well. This encourages consumers and companies to borrow and spend, causing more Debt to be issued and increasing GNI. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
-</li>
-</ol>
-<p>Raising the policy rate has the opposite effects:
-<cinterest-up></cinterest-up><arrow></arrow><interest-up></interest-up><debt-down></debt-down><equity-down></equity-down><gni-down></gni-down></p>
+<p>Monetary policy is the process through which the Bank of England effects the economy by altering the amount of <ctext color="purple-dark" text="Money"></ctext> in circulation.</p>
+<p>In all cases, an increase of money in circulation without any change in demand will reduce it’s value in relative terms, by increasing the value of Equity and Debt. This will make consumers and companies richer, causing a temporary increase in spending and increasing GNI. <money-plus></money-plus><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up></p>
+<p>However, this has a downside too: remember that Savings are a liability for everyone. Increasing their value without a comparable increase in income will mean a falling share of GNI going to Wages, and a lower Structural Multiplier. This can create a positive feedback loop where even more money needs to be created to keep growth on track. <equity-up></equity-up><debt-up></debt-up><arrow></arrow><dividends-up></dividends-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><money-plus></money-plus><arrow></arrow><equity-up></equity-up><debt-up></debt-up><cycle></cycle></p>
+<p>If taking steps to increase GNI through new money, it is therefore important that the most efficient route is chosen, so that as little additional money as possible is created.</p>
+<h2>Deposits</h2>
+<p>The Bank of England influences policy by adjusting the Bank Rate, which is the rate of <ctext color="green-light" text="Interest"></ctext> they pay on <ctext color="green-dark" text="Currency"></ctext> deposited with them by banks. Changes to this rate will result in banks themselves adjusting the rate of interest they pay on deposits, and also short-term market interest rates.</p>
+<p>Lower market interest rates encourage consumers and companies to borrow and spend, causing more Debt and Deposits to be created. <cinterest-down></cinterest-down><arrow></arrow><interest-down></interest-down><arrow></arrow><debt-plus></debt-plus><money-plus></money-plus><arrow></arrow><gni-up></gni-up></p>
+<p>Unfortunately this creates another positive feedback loop - as Debt slows GNI growth, even more new Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession. <debt-plus></debt-plus><arrow></arrow><interest-up></interest-up><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-plus></debt-plus><cycle></cycle></p>
+<p>Notice that raising interest rates doesn’t actually decrease the amount of Debt, just discourages further increases. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will temporarily increase the total amount of Debt and slow GNI growth until it is paid back. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-plus></debt-plus><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
 <blockquote><p>The Bank of England is in a uniquely powerful position within the economy, and market rates will often adjust without the Bank needing to do anything. If the Bank’s target is well understood, markets will move in advance of any changes to the Bank Rate, which can even lead to situations where the Bank Rate never needs to move in the first place.</p>
 </blockquote>
-<p>Notice that raising the Bank Rate doesn’t actually decrease the amount of Debt, just discourages further increases. This asymmetry means that cutting then raising interest rates will not have zero overall effect, but will temporarily increase the total amount of Debt and slow GNI growth until it is paid back. <cinterest-down></cinterest-down><cinterest-up></cinterest-up><arrow></arrow><debt-up></debt-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
-<h3>Problems</h3>
-<p>This approach has worked for a long time, but each of its two transmission mechanisms causes a positive feedback loop:</p>
-<ol>
-<li><p>Increases income indirectly by increasing the value of Savings. This is a back-to-front approach, and will mean incomes falling relative to total Savings, as only part of the increase is passed down. This means a falling share of GNI going to Wages, and a lower Structural Multiplier. <equity-up></equity-up><debt-up></debt-up><arrow></arrow><dividends-up></dividends-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><equity-up></equity-up><debt-up></debt-up><cycle></cycle></p>
-</li>
-<li><p>Increases income by encouraging more Debt. As Debt slows GNI growth, even more Debt is then required to keep GNI on track. Interest rates have fallen consistently since the 1970s and couldn’t be cut any further during the 2008 financial crisis, resulting in a long recession. <debt-up></debt-up><arrow></arrow><interest-up></interest-up><wages-down></wages-down><arrow></arrow><mult-down></mult-down><income-down></income-down><arrow></arrow><debt-up></debt-up><cycle></cycle></p>
-</li>
-</ol>
-<p>These two effects mean that conventional monetary policy cannot keep working indefinitely.</p>
-<h2>Unconventional</h2>
-<p>Unconventional policy is actually much simpler: the Bank of England can increase or decrease the amount of <ctext color="green-dark" text="Currency"></ctext> in circulation, either temporarily or permanently.</p>
-<h3>Temporary</h3>
+<p>The combination of these two feedback loops mean that relying on ever-increasing Debt to keep GNI on track will not work in the long-term.</p>
+<h2>Currency</h2>
+<p>The Bank of England can increase or decrease the amount of <ctext color="green-dark" text="Currency"></ctext> in circulation, either temporarily or permanently.</p>
+<p>We need to consider <em>how</em> the Bank of England does this - the mechanism through which the new Currency enters circulation will change the effect that it has.</p>
+<h3>Quantitative Easing</h3>
 <p>Quantitative Easing (QE) is a way of achieving a temporary increase, by directly purchasing government bonds from existing bondholders.</p>
 <ul>
 <li>The Bank of England buys government bonds in exchange for Currency
 </li>
-<li>This reduces outstanding Debt <debt-down></debt-down> and increases Currency <currency-up></currency-up>
+<li>This reduces outstanding Debt <debt-down></debt-down> and increases Currency <currency-plus></currency-plus>
 </li>
-<li>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-down></currency-down>
+<li>When the bonds redeem, their face value is paid to the Bank of England, removing it from circulation <currency-minus></currency-minus>
 </li>
 <li>The government replaces this with new Debt, thus returning us to where we started <debt-up></debt-up>
-</li>
-<li>Overall there is no net effect after the bond has matured <currency-flat></currency-flat><debt-flat></debt-flat>
 </li>
 </ul>
 <div class="container w-2/3 flex mt-2">
@@ -70,14 +57,13 @@
     <div class="w-16 h-10 text-left p-1 mr-4">After</div>
     <assets v-bind:assets="after" classes="mb-1 h-8 w-64"></assets>
 </div><p><code class="inline">Change in distribution of assets from QE</code></p>
-<p>While it is active, QE works primarily through it’s affect on the value of Equity and Debt. Raising the amount of <ctext color="green-dark" text="Currency"></ctext> in circulation without changing demand for it will increase the value of Savings. This makes the holders of these Savings richer, temporarily encouraging them to spend more on Consumption <currency-up></currency-up><arrow></arrow><equity-up></equity-up><debt-up></debt-up><arrow></arrow><gni-up></gni-up>. This exacerbates the Savings feedback loop caused by conventional policy.</p>
-<blockquote><p>In some countries, the central bank performs small-scale QE as part of conventional policy, to move short-term market interest rates towards their target rate</p>
+<blockquote><p>In some countries, the central bank regularly performs small-scale QE to move short-term market interest rates towards their target rate, if adjusting the Bank Rate alone is not enough</p>
 </blockquote>
-<h3>Permanent</h3>
-<p>A more sustainable way to achieve a similar effect would be for the Bank of England to print <ctext color="green-dark" text="Currency"></ctext> and spend it on <ctext color="blue-dark" text="Consumption"></ctext>.</p>
-<p>Additional Consumption spending directly raises GNI, increasing incomes relative to total Savings, and therefore Wages, the Structural Multiplier and GNI growth. <currency-up></currency-up><arrow></arrow><gni-up></gni-up><wages-up></wages-up><arrow></arrow><mult-up></mult-up><income-up></income-up></p>
-<p>The value of Savings will also rise, but as this is a secondary effect driven by higher incomes, the overall impact would still be positive for the Structural Multiplier.</p>
-<blockquote><p>If the Bank of England is credible enough with its targets, the expectation of Currency being printed if required will help to keep GNI on track to meet those targets</p>
+<p>QE works both by increasing the value of Savings, and by getting money into the hands of the original bondholder. Some small proportion will be spent on Consumption, but unfortunately the Multiplier <mult></mult> will be low and the majority will be spent on buying other Savings, further inflating their price. <currency-plus></currency-plus><arrow></arrow><equity-up></equity-up><debt-up></debt-up></p>
+<h3>Direct Spending</h3>
+<p>A better way to achieve a similar effect would be for the Bank of England to print <ctext color="green-dark" text="Currency"></ctext> and spend it on <ctext color="blue-dark" text="Consumption"></ctext>.</p>
+<p>Additional Consumption spending directly raises GNI as the money is spent. This guarantees that the Multiplier on this spending will be at least 100% <em>greater</em> than the Multiplier from QE. This is therefore by far the most efficient route of creating new money. <currency-plus></currency-plus><arrow></arrow><gni-up></gni-up></p>
+<blockquote><p>If the Bank of England is credible enough with its targets, the expectation of Currency being printed if required will help to keep GNI on track to meet those targets, further reducing the actual amount that needs printing</p>
 </blockquote>
 <p>However, this approach suffers from a very significant flaw: choosing where to spend the money is inherently political. It seems wrong to have an unelected central bank deciding where to target this, while the government and opposition argue about where tax rises and cuts should fall. This is also a solid criticism of QE, since it targets banks and bondholders. Are they really the most in need of help?</p>
 <p>Furthermore, remember that our targets for GNI growth are symmetric - if growth is too high one year then we need a way to remove the new money from circulation. This is difficult for the Bank of England to achieve by themselves.</p>

@@ -20,6 +20,7 @@
     <main id="main">
   <div class="draft">DRAFT</div>
   <h1>15 Recessions</h1>
+<p>No matter how well policymakers plan ahead, recessions will inevitably happen. It is therefore important to position the economy so it is well placed to recover afterwards.</p>
 <p>A recession is what we get when GNI shrinks from one year to the next. This lost income gives rise to an increase in unemployment and some businesses needing to close down. If future expectations for GNI growth fall, the impact on Assets and Income is as follows:</p>
 <h2>Low Debt Society</h2>
 <p><ai-change :ab="low_before" :ib="low_before_income" :aa="low_after" :ia="low_after_income"></ai-change></p>
@@ -27,7 +28,7 @@
 <p><ai-change :ab="high_before" :ib="high_before_income" :aa="high_after" :ia="high_after_income"></ai-change></p>
 <h2>Impact</h2>
 <ul>
-<li><ctext color="green-dark" text="Currency"></ctext>, <ctext color="green-light" text="Interest"></ctext>, <ctext color="teal-dark" text="Deposits"></ctext> &amp; <ctext color="teal-light" text="Interest"></ctext>
+<li><ctext color="green-dark" text="Currency"></ctext> &amp; <ctext color="green-light" text="Interest"></ctext>
 </li>
 </ul>
 <p>No change</p>
@@ -52,48 +53,39 @@
 <p>In the low debt society, they actually rise as a share of GNI due to the falling share of Dividends and Interest. <wages-up></wages-up></p>
 <p>In the high debt society however, they fall as a share of GNI due to the rising share of GNI made up of Debt interest payments. <wages-down></wages-down></p>
 <h2>After Effects</h2>
-<p>In the low debt society, the economy seems well poised to bounce back. Wages as a share of <span class="bg-grey border border-grey-dark px-2">GNI</span> have risen <wages-up></wages-up>, which suggests the Structural Multiplier will have risen too <mult-up></mult-up>.</p>
+<p>In the low debt society, the economy seems well poised to bounce back. Wages as a share of <span class="bg-grey border border-grey-dark px-2">GNI</span> have risen <wages-up></wages-up>, along with the Structural Multiplier <mult-up></mult-up>.</p>
 <p>In the high debt society, things look very different. Although the value of <ctext color="orange-dark" text="Savings"></ctext> have fallen, the share of <span class="bg-grey border border-grey-dark px-2">GNI</span> going to workers has fallen by even more <wages-down></wages-down>, so we should expect a lower Structural Multiplier <mult-down></mult-down> and a lower Savings Ceiling.</p>
 <p>In a crash, <ctext color="red-dark" text="Debt"></ctext> cannot contract smoothly the way that <ctext color="yellow-dark" text="Equity"></ctext> can. This means that afterwards the choice for policymakers is often between sudden defaults or an overhang of Debt that will cause a drag on GNI growth for years to come <income-down></income-down>.</p>
-<p>TODO Rewrite after 14</p>
 <p>This is exactly what happened in the United Kingdom during and after the 2008 financial crisis. The slow response from the Bank of England to the start of the trouble in 2007 forced the government into bailing out the banking industry, and this has left an excess of Debt hanging over society. It is highly likely that total Savings are currently greater than the Savings Ceiling.</p>
 <p>Next: <a href="16-austerity.html">Austerity</a></p>
 <script>
     var data = {
-        low_before: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
-                                    { name: "Depo", color: "teal-dark", class: "w-18 p-2" },
+        low_before: [{ name: "Ccy", color: "green-dark", class: "w-36 p-2" },
                                     { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
                                     { name: "Debt", color: "red-dark", class: "w-16 p-2" }],
     low_before_income: [{ name: "Wages", color: "blue-light", class: "w-40" },
-                                                { name: "", color: "green-light", class: "w-2" },
-                                                { name: "", color: "teal-light", class: "w-2" },
+                                                { name: "", color: "green-light", class: "w-4" },
                                                 { name: "Div.", color: "yellow-light", class: "w-16" },
                                                 { name: "Int.", color: "red-light", class: "w-12" }, { class: "w-4"}],
-        low_after: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
-                                    { name: "Depo", color: "teal-dark", class: "w-18 p-2" },
+        low_after: [{ name: "Ccy", color: "green-dark", class: "w-36 p-2" },
                                 { name: "Equity", color: "yellow-dark", class: "w-16 p-2" },
                                 { name: "Debt", color: "red-dark", class: "w-12 p-2" }],
     low_after_income: [{ name: "Wages", color: "blue-light", class: "w-36" },
-                                                { name: "", color: "green-light", class: "w-2" },
-                                                { name: "", color: "teal-light", class: "w-2" },
+                                                { name: "", color: "green-light", class: "w-4" },
                                                 { name: "Div.", color: "yellow-light", class: "w-8" },
                                                 { name: "Int.", color: "red-light", class: "w-8" }, { class: "w-4"}],
-        high_before: [{ name: "Ccy", color: "green-dark", class: "w-8 p-2" },
-                                    { name: "Depo", color: "teal-dark", class: "w-10 p-2" },
+        high_before: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
                                     { name: "Equity", color: "yellow-dark", class: "w-24 p-2" },
                                     { name: "Debt", color: "red-dark", class: "w-34 p-2" }],
     high_before_income: [{ name: "Wages", color: "blue-light", class: "w-30" },
                                                 { name: "", color: "green-light", class: "w-1" },
-                                                { name: "", color: "teal-light", class: "w-1" },
                                                 { name: "Div.", color: "yellow-light", class: "w-16" },
                                                 { name: "Interest", color: "red-light", class: "w-24" }, { class: "w-4"}],
-        high_after: [{ name: "Ccy", color: "green-dark", class: "w-8 p-2" },
-                                { name: "Depo", color: "teal-dark", class: "w-10 p-2" },
+        high_after: [{ name: "Ccy", color: "green-dark", class: "w-18 p-2" },
                                 { name: "Equity", color: "yellow-dark", class: "w-16 p-2" },
                                 { name: "Debt", color: "red-dark", class: "w-30 p-2" }],
     high_after_income: [{ name: "Wages", color: "blue-light", class: "w-24" },
-                                                { name: "", color: "green-light", class: "w-1" },
-                                                { name: "", color: "teal-light", class: "w-1" },
+                                                { name: "", color: "green-light", class: "w-2" },
                                                 { name: "Div.", color: "yellow-light", class: "w-8" },
                                                 { name: "Interest", color: "red-light", class: "w-22" }, { class: "w-4"}],
     };
