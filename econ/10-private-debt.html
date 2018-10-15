@@ -21,8 +21,8 @@
   <div class="draft">DRAFT</div>
   <h1>10 Private Debt</h1>
 <h2>Bank Loans</h2>
-<p>The majority of new <ctext color="purple-dark" text="Money"></ctext> created in the economy is created by banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account. The amount lent by banks is constrained by consumer demand, how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements.</p>
-<p>This is explained in a <a href="https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf?la=en&hash=9A8788FD44A62D8BB927123544205CE476E01654">Bank of England report</a> on the subject. We can see this most clearly using an asset liability diagram.</p>
+<p>The majority of new <ctext color="purple-dark" text="Money"></ctext> created in the economy is created by banks making loans. It is a common misconception that banks simply lend out depositors’ money, when actually it is the act of making a loan that creates money in the borrower’s account.</p>
+<p>The amount lent by banks is constrained by consumer demand, how many profitable lending opportunities there are, and by the bank’s own reserves and capital requirements. This is explained in a <a href="https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy.pdf?la=en&hash=9A8788FD44A62D8BB927123544205CE476E01654">Bank of England report</a> on the subject. We can see this most clearly using an asset liability diagram.</p>
 <h3>Bank</h3>
 <p><al-change :ab="bankab" :aa="bankaa" :lb="banklb" :la="bankla"></al-change></p>
 <h3>Borrower</h3>
@@ -30,16 +30,16 @@
 <ul>
 <li>Before, we have a bank and a borrower.
 </li>
-<li>The assets for the bank are Currency, some Equity, and previous loans they have made, while their liabilities are Deposits, as they have borrowed this money from consumers
+<li>The assets for the bank are Currency, some Equity, and previous loans they have made, while their liabilities are deposits, as they have borrowed this money from consumers
 </li>
-<li>The assets for the borrower are Currency and Deposits, offset by other liabilities
+<li>The assets for the borrower are Currency and deposits, offset by other liabilities
 </li>
-<li>After the new loan, the borrower holds a larger amount of Deposits, plus now has the new loan as a liability
+<li>After the new loan, the borrower holds a larger amount of deposits, plus now has the new loan as a liability
 </li>
-<li>The bank now owns the new loan as an asset, and has an offsetting increase in Deposits on the liability side
+<li>The bank now owns the new loan as an asset, and has an offsetting increase in deposits on the liability side
 </li>
 </ul>
-<p>Since deposits are money, there has been a strict increase in money in circulation along with an increase in Debt. <debt-plus></debt-plus><money-plus></money-plus></p>
+<p>Since deposits are money, there has been a strict increase in money in circulation along with the increase in Debt. <debt-plus></debt-plus><money-plus></money-plus></p>
 <p>After the new deposit is spent it will contribute to GNI, so it will have a Multiplier <mult></mult> just like normal income.</p>
 <h3>Examples</h3>
 <ol>
@@ -47,14 +47,14 @@
 </li>
 </ol>
 <p>Borrowing to buy a house will generally have a low Multiplier, as in most cases the seller will just re-spend the money on a different house or other Savings. Few people sell a house then spend the proceeds on Consumption. This kind of borrowing therefore leads to an increase in house prices, but only a limited increase in GNI. <debt-plus></debt-plus><money-plus></money-plus><arrow></arrow><equity-up></equity-up><gni-flat></gni-flat></p>
-<ol>
+<ol start="2">
 <li><strong>Business Investment</strong>
 </li>
 </ol>
 <p>Borrowing to invest in growing a business will generally have a higher Multiplier, as most of the expenditure will be on Consumption or Wages and thus become income for others.
 <debt-plus></debt-plus><money-plus></money-plus><arrow></arrow><mult-up></mult-up><wages-up></wages-up><gni-up></gni-up></p>
 <h2>Corporate Bonds</h2>
-<p>The second type of “new money” via Private Debt comes from bonds issued by companies and sold to investors.</p>
+<p>The second type of new money via Private Debt comes from bonds issued by companies and sold to investors.</p>
 <h3>Company</h3>
 <p><al-change :ab="companyab" :aa="companyaa" :lb="companylb" :la="companyla"></al-change></p>
 <h3>Investor</h3>
@@ -62,14 +62,13 @@
 <ul>
 <li>Before the loan, both the company and investor have a mix of assets on hand. The company’s liabilities are mostly existing bonds.
 </li>
-<li>When the company issues the new bond, they sell it to the investor and in exchange Deposits are paid to the company from the investor.
+<li>When the company issues the new bond, they sell it to the investor and in exchange deposits are paid to the company from the investor.
 </li>
 </ul>
-<p>There has been no net increase in Deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which is again a net increase in Debt <debt-plus></debt-plus>. As this bond is a comparatively risky investment, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
-<p>The answer is that it doesn’t do so directly, but it does move Deposits from an investor (unlikely to spend them) to a company (who is more likely to, as they must have a reason for issuing the bond). This should increase the Multiplier for that Deposit, and therefore increase GNI. <debt-plus></debt-plus><arrow></arrow><gni-up></gni-up></p>
-<p>If the company is a strong credit who is very unlikely to default, then the bond will also act somewhat similarly to money, also a net positive for GNI.</p>
+<p>There has been no net increase in deposits as the only change was a transfer. The only newly created asset this time is the bond issued by the company, which is again a net increase in Debt <debt-plus></debt-plus>. As this bond is a comparatively risky investment, it is not really new money at all. So why do we say that issuing this bond creates money?</p>
+<p>The answer is that it doesn’t do so directly, but it does move deposits from an investor (unlikely to spend them) to a company (who is more likely to, as they must have a reason for issuing the bond). This should increase the Multiplier for that Deposit, and therefore increase GNI. <debt-plus></debt-plus><arrow></arrow><mult-up></mult-up><gni-up></gni-up></p>
 <h2>Effects on Growth</h2>
-<p>In both of the above cases, an investor spends Deposits to purchase Debt, and a borrower issues the Debt and receives Deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate but temporary boost to GNI as this money is spent. <debt-plus></debt-plus><arrow></arrow><gni-up></gni-up></p>
+<p>In both of the above cases, an investor spends deposits to purchase Debt, and a borrower issues the Debt and receives deposits. As the borrower (high MM) is more likely to spend on Consumption than the investor (low MM), this gives an immediate but temporary boost to GNI as this money is spent. <debt-plus></debt-plus><arrow></arrow><gni-up></gni-up></p>
 <p>However, this initial transfer is not the only time money changes hands under a loan. Every time interest is paid, it goes from the borrower (high MM) to the investor (low MM), which will lower the Structural Multiplier and act as an ongoing drag on GNI. <debt-plus></debt-plus><arrow></arrow><interest-up></interest-up><arrow></arrow><mult-down></mult-down><income-down></income-down></p>
 <p>So although new Private Debt has an initial positive effect on GNI when taken out, it will slow GNI growth until it is paid back. <debt-plus></debt-plus><arrow></arrow><gni-up></gni-up><mult-down></mult-down><income-down></income-down></p>
 <p>Next: <a href="11-government-debt.html">Government Debt</a></p>
