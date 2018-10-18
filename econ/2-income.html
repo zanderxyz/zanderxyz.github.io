@@ -22,12 +22,12 @@
   <h1>2 Income</h1>
 <p>We can continue by categorising all income into groups that are closely related to the Asset groups:</p>
 <ol>
-<li><ctext color="green-light" text="Interest"></ctext> - Return on <ctext color="green-dark" text="Currency"></ctext>
+<li><ctext color="green-light" text="Currency Interest"></ctext> - Return on <ctext color="green-dark" text="Currency"></ctext>
 </li>
 </ol>
 <p>As banknotes and coins earn no interest, banks are the only ones who can receive interest on Currency. They do this by depositing it with the Bank of England, and are paid the Bank Rate in return.</p>
 <ol start="2">
-<li><ctext color="red-light" text="Interest"></ctext> - Return on <ctext color="red-dark" text="Debt"></ctext>
+<li><ctext color="red-light" text="Debt Interest"></ctext> - Return on <ctext color="red-dark" text="Debt"></ctext>
 </li>
 </ol>
 <p>All Debt pays interest of some kind, usually a fixed amount per year.</p>
@@ -49,7 +49,9 @@
 <p>This covers any kind of income that does not come from an Asset. It is primarily comprised of wages from employment, but also includes gifts and benefits paid by the government.</p>
 <h2>Total Income</h2>
 <p>All income received comes from one of these four sources. The overall proportion of each will vary over time and be influenced by the make-up of assets held. In aggregate across the country it may look similar to this.</p>
-<p><assets :assets="assets" classes="text-lg h-10"></assets>
+<p>Assets
+<assets :assets="assets" classes="text-lg h-10"></assets>
+Income
 <assets :assets="income" classes="h-6"></assets>
 <span class="text-base">(not to scale)</span></p>
 <p>Although time passes continuously in the real world, we measure time-dependent variables like income with reference to a specific time period. A year is a convenient default to use, as many measures of income (such as wages) are already quoted on an annual basis.</p>
@@ -61,9 +63,9 @@
             { name: "Equity", color: "yellow-dark", class: "w-28 p-2" },
             { name: "Debt", color: "red-dark", class: "w-32 p-2" }],
     income: [{ name: "Wages", color: "blue-light", class: "w-36" },
-            { name: "", color: "green-light", class: "w-4" },
+            { name: "C.I.", color: "green-light", class: "w-4" },
             { name: "Dividends", color: "yellow-light", class: "w-20" },
-            { name: "Interest", color: "red-light", class: "w-20" },]
+            { name: "D. Interest", color: "red-light", class: "w-20" },]
     };
 </script>
   <div class="menu">

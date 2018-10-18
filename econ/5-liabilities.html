@@ -23,9 +23,9 @@
 <p>Liabilities are the opposite side of the balance sheet from Assets. Just as <ctext color="orange-dark" text="Savings"></ctext> are an Asset to the person receiving income from it, they are a Liability for the people paying that income.</p>
 <h3>Example - Property and Mortgages</h3>
 <p>A landlord who rents out a house has Equity in the house as an Asset, and their mortgage as a liability (we assume here that 20% is paid off):
-<assets-liabilities :assets="house" :liabilities="mortgage" classes="w-64"></assets-liabilities></p>
+<assets-liabilities :assets="housea" :liabilities="mortgage" classes="w-64"></assets-liabilities></p>
 <p>A tenant who lives in the house has Equity in the house as a Liability, as they must pay rent to live there:
-<assets-liabilities :assets="various" :liabilities="house" classes="w-64"></assets-liabilities></p>
+<assets-liabilities :assets="various" :liabilities="housel" classes="w-64"></assets-liabilities></p>
 <p>The bank has the mortgage Debt as an Asset:
 <assets-liabilities :assets="mortgage" :liabilities="various23" classes="w-64"></assets-liabilities></p>
 <h2>Conclusions</h2>
@@ -33,7 +33,7 @@
 <ul>
 <li><p><ctext color="green-dark" text="Currency"></ctext> is only ever a liability of the Bank of England</p>
 </li>
-<li><p><ctext color="yellow-dark" text="Equity"></ctext> and <ctext color="red-dark" text="Debt"></ctext> are liabilities of whoever is paying the <ctext color="yellow-light" text="Dividends"></ctext> or <ctext color="red-light" text="Interest"></ctext>. At first this is the company who issued the Equity or Debt, but the company is just a middle man - ultimately the dividends and interest are paid by consumers who buy products from the company.</p>
+<li><p><ctext color="yellow-dark" text="Equity"></ctext> and <ctext color="red-dark" text="Debt"></ctext> are liabilities of whoever is paying the <ctext color="yellow-light" text="Dividends"></ctext> or <ctext color="red-light" text="Debt Interest"></ctext>. At first this is the company who issued the Equity or Debt, but the company is just a middle man - ultimately the dividends and interest are paid by consumers who buy products from the company.</p>
 </li>
 </ul>
 <blockquote><p>Considered across the whole of society, <ctext color="orange-dark" text="Savings"></ctext> are a Liability for everyone.</p>
@@ -45,7 +45,8 @@
         bank_a: [{name: "Currency", color: "green-dark", class: "w-1/2"},
                             {name: "Loans", color: "red-dark", class: "w-1/2"}],
         bank_l: [{name: "Deposits", color: "red-dark", class: "w-1/2"}],
-        house: [{name: "House", color: "yellow-dark", class: "w-full"}],
+        housel: [{name: "House (Liability)", color: "yellow-dark", class: "w-full"}],
+        housea: [{name: "House (Asset)", color: "yellow-dark", class: "w-full"}],
         mortgage: [{name: "Mortgage", color: "red-dark", class: "w-4/5"}],
         various: [{name: "Other Assets", color: "grey-dark", class: "w-full"}],
         various23: [{name: "Other Liabilities", color: "grey-dark", class: "w-4/5"}],
