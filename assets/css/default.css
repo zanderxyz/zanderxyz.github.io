@@ -60,6 +60,14 @@ ul>li:first-child {
     margin-top: 0rem;
 }
 
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
 ul>li,
 ol>li {
     margin-left: 0rem;
