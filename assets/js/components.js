@@ -21,8 +21,8 @@ var colors = {
   'teal-light': 'bg-teal-200 border border-teal-100',
   'teal-dark': 'bg-teal-300 border border-teal-400',
   'teal-dark-new': 'bg-teal-200 border border-teal-400',
-  'grey-light': 'bg-grey-300 border border-grey-200',
-  'grey-dark': 'bg-grey-400 border border-grey-500'
+  'grey-light': 'bg-gray-300 border border-gray-200',
+  'grey-dark': 'bg-gray-400 border border-gray-500'
 };
 
 var text_colors = {
@@ -44,8 +44,8 @@ var text_colors = {
   'indigo-dark': 'text-indigo-100',
   'teal-light': 'text-teal-500',
   'teal-dark': 'text-teal-100',
-  'grey-light': 'text-grey-500',
-  'grey-dark': 'text-grey-100'
+  'grey-light': 'text-gray-500',
+  'grey-dark': 'text-gray-100'
 }
 
 Vue.component('ctext', {
