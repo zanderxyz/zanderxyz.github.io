@@ -26,26 +26,26 @@ var colors = {
 };
 
 var text_colors = {
-  'red-light': 'text-red-dark',
-  'red-dark': 'text-red-lightest',
-  'green-light': 'text-green',
-  'green-dark': 'text-green-lightest',
-  'yellow-light': 'text-yellow-dark',
+  'red-light': 'text-red-500',
+  'red-dark': 'text-red-100',
+  'green-light': 'text-green-400',
+  'green-dark': 'text-green-100',
+  'yellow-light': 'text-yellow-500',
   'yellow-dark': 'text-white',
-  'blue-light': 'text-blue-dark',
-  'blue-dark': 'text-blue-lightest',
-  'orange-light': 'text-orange-dark',
-  'orange-dark': 'text-orange-lightest',
-  'purple-light': 'text-purple-dark',
-  'purple-dark': 'text-purple-lightest',
-  'pink-light': 'text-pink-dark',
-  'pink-dark': 'text-pink-lightest',
-  'indigo-light': 'text-indigo-dark',
-  'indigo-dark': 'text-indigo-lightest',
-  'teal-light': 'text-teal-dark',
-  'teal-dark': 'text-teal-lightest',
-  'grey-light': 'text-grey-dark',
-  'grey-dark': 'text-grey-lightest'
+  'blue-light': 'text-blue-500',
+  'blue-dark': 'text-blue-100',
+  'orange-light': 'text-orange-500',
+  'orange-dark': 'text-orange-100',
+  'purple-light': 'text-purple-500',
+  'purple-dark': 'text-purple-100',
+  'pink-light': 'text-pink-500',
+  'pink-dark': 'text-pink-100',
+  'indigo-light': 'text-indigo-500',
+  'indigo-dark': 'text-indigo-100',
+  'teal-light': 'text-teal-500',
+  'teal-dark': 'text-teal-100',
+  'grey-light': 'text-grey-500',
+  'grey-dark': 'text-grey-100'
 }
 
 Vue.component('ctext', {
