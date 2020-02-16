@@ -1,7 +1,7 @@
 var colors = {
-  'red-light': 'bg-red-200 border border-red-100',
-  'red-dark': 'bg-red-300 border border-red-400',
-  'red-dark-new': 'bg-red-200 border border-red-400',
+  'red-light': 'bg-red-300 border border-red-200',
+  'red-dark': 'bg-red-400 border border-red-500',
+  'red-dark-new': 'bg-red-300 border border-red-500',
   'green-light': 'bg-green-200 border border-green-100',
   'green-dark': 'bg-green-300 border border-green-400',
   'green-dark-new': 'bg-green-200 border border-green-400',
@@ -26,8 +26,8 @@ var colors = {
 };
 
 var text_colors = {
-  'red-light': 'text-red-500',
-  'red-dark': 'text-red-100',
+  'red-light': 'text-red-600',
+  'red-dark': 'text-red-200',
   'green-light': 'text-green-400',
   'green-dark': 'text-green-100',
   'yellow-light': 'text-yellow-500',
