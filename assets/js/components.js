@@ -21,8 +21,8 @@ var colors = {
   'teal-light': 'bg-teal-200 border border-teal-100',
   'teal-dark': 'bg-teal-300 border border-teal-400',
   'teal-dark-new': 'bg-teal-200 border border-teal-400',
-  'grey-light': 'bg-gray-300 border border-gray-200',
-  'grey-dark': 'bg-gray-400 border border-gray-500'
+  'gray-light': 'bg-gray-300 border border-gray-200',
+  'gray-dark': 'bg-gray-400 border border-gray-500'
 };
 
 var text_colors = {
@@ -44,8 +44,8 @@ var text_colors = {
   'indigo-dark': 'text-indigo-100',
   'teal-light': 'text-teal-500',
   'teal-dark': 'text-teal-100',
-  'grey-light': 'text-gray-500',
-  'grey-dark': 'text-gray-100'
+  'gray-light': 'text-gray-500',
+  'gray-dark': 'text-gray-100'
 }
 
 Vue.component('ctext', {
@@ -406,7 +406,7 @@ Vue.component('interest-down', {
 Vue.component('income-up', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-up", color: "grey-light", class: "w-4" }]
+      icons: [{ icon: "fa-sort-up", color: "gray-light", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -415,7 +415,7 @@ Vue.component('income-up', {
 Vue.component('income-flat', {
   data: function () {
     return {
-      icons: [{ name: "-", color: "grey-light", class: "w-4" }]
+      icons: [{ name: "-", color: "gray-light", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -424,7 +424,7 @@ Vue.component('income-flat', {
 Vue.component('income-down', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-down", color: "grey-light", class: "w-4" }]
+      icons: [{ icon: "fa-sort-down", color: "gray-light", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -434,7 +434,7 @@ Vue.component('income-down', {
 Vue.component('gni-up', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-up", color: "grey-dark", class: "w-4" }]
+      icons: [{ icon: "fa-sort-up", color: "gray-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -443,7 +443,7 @@ Vue.component('gni-up', {
 Vue.component('gni-flat', {
   data: function () {
     return {
-      icons: [{ name: "-", color: "grey-dark", class: "w-4" }]
+      icons: [{ name: "-", color: "gray-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
@@ -452,7 +452,7 @@ Vue.component('gni-flat', {
 Vue.component('gni-down', {
   data: function () {
     return {
-      icons: [{ icon: "fa-sort-down", color: "grey-dark", class: "w-4" }]
+      icons: [{ icon: "fa-sort-down", color: "gray-dark", class: "w-4" }]
     }
   },
   template: '<assets-icons v-bind:assets="icons"></assets-icons>'
