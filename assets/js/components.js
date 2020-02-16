@@ -495,7 +495,7 @@ Vue.component('mult-down', {
 })
 
 Vue.component('mult', {
-  template: '<span class="text-blue"><i class="far fa-times"></i></span>'
+  template: '<span class="text-blue"><i class="fas fa-times-circle"></i></span>'
 })
 
 Vue.component('sm', {
